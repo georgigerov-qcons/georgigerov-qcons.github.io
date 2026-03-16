@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Georgi Gerov - Quality Expert</title>
-    <!-- Google Fonts for Caveat handwriting -->
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts for Montserrat (main) and Inter (expanded) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* ===== RESET & BASE STYLES ===== */
         * {
@@ -15,10 +15,9 @@
         }
         
         body {
-            font-family: 'Caveat', 'Bradley Hand', 'Comic Sans MS', cursive;
+            font-family: 'Montserrat', sans-serif; /* Montserrat for main interface */
             line-height: 1.6;
             color: #1a2b3c;
-            /* Subtle gradient background with noise texture */
             background: linear-gradient(135deg, #d3d3d3 0%, #e0e0e0 100%);
             background-attachment: fixed;
             position: relative;
@@ -66,7 +65,7 @@
         }
         
         .header-title h1 {
-            font-family: 'Caveat', cursive;
+            font-family: 'Montserrat', sans-serif;
             font-size: 4.5em;
             color: #0a3147;
             margin-bottom: 5px;
@@ -76,7 +75,7 @@
         }
         
         .header-title .subtitle {
-            font-family: 'Caveat', cursive;
+            font-family: 'Montserrat', sans-serif;
             color: #2c5282;
             font-size: 2.2em;
             font-weight: 500;
@@ -154,22 +153,22 @@
         
         .section-card:hover {
             transform: translateY(-15px);
-            border-color: #C69C6D; /* Gold accent */
+            border-color: #C69C6D;
             border-bottom-color: #C69C6D;
             box-shadow: 0 25px 45px rgba(198, 156, 109, 0.25);
         }
         
         .section-card h3 {
-            font-family: 'Caveat', cursive;
+            font-family: 'Montserrat', sans-serif;
             color: #2c5282;
-            font-size: 2em;
+            font-size: 1.6em;
             margin-top: 15px;
             font-weight: 600;
             transition: color 0.3s ease;
         }
         
         .section-card:hover h3 {
-            color: #C69C6D; /* Gold accent on hover */
+            color: #C69C6D;
         }
         
         /* Card with photo - only for About Me */
@@ -185,7 +184,7 @@
         }
         
         .section-card:hover .profile-photo {
-            border-color: #C69C6D; /* Gold accent on hover */
+            border-color: #C69C6D;
         }
         
         /* Card image styling - ALL SAME SIZE */
@@ -202,7 +201,7 @@
             filter: drop-shadow(0 8px 12px rgba(198, 156, 109, 0.4));
         }
         
-        /* ===== EXPANDED CONTENT AREA ===== */
+        /* ===== EXPANDED CONTENT AREA - ALL TEXT USES INTER FONT ===== */
         .expanded-content {
             display: none;
             margin: 40px 0 50px;
@@ -211,11 +210,12 @@
             border-radius: 30px;
             box-shadow: 0 30px 50px rgba(0, 0, 0, 0.15);
             border-left: 8px solid #2c5282;
-            border-bottom: 4px solid #C69C6D; /* Gold accent */
+            border-bottom: 4px solid #C69C6D;
             animation: slideDown 0.5s ease;
             width: 100%;
             position: relative;
             z-index: 2;
+            font-family: 'Inter', sans-serif; /* Inter for all expanded content */
         }
         
         .expanded-content.active {
@@ -244,30 +244,50 @@
             line-height: 1;
             padding: 0 15px;
             transition: color 0.2s;
+            font-family: 'Inter', sans-serif;
         }
         
         .close-btn:hover {
-            color: #C69C6D; /* Gold accent */
+            color: #C69C6D;
         }
         
-        /* Section Headers */
+        /* Section Headers - Inter */
         .expanded-content h2 {
-            font-family: 'Caveat', cursive;
+            font-family: 'Inter', sans-serif;
             color: #0a3147;
             font-size: 3.5em;
             margin-bottom: 30px;
             border-bottom: 4px solid #e2e8f0;
             padding-bottom: 20px;
+            font-weight: 700;
         }
         
         .expanded-content h3 {
-            font-family: 'Caveat', cursive;
+            font-family: 'Inter', sans-serif;
             color: #2c5282;
             font-size: 2.5em;
             margin: 30px 0 20px;
+            font-weight: 600;
         }
         
-        /* About Me Tags - No Icons with accent hover */
+        .expanded-content h4 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+        
+        .expanded-content h5 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+        
+        .expanded-content p, 
+        .expanded-content li, 
+        .expanded-content span,
+        .expanded-content div {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* About Me Tags - Inter */
         .tag-cloud {
             display: flex;
             gap: 15px;
@@ -280,8 +300,8 @@
             background: #e2e8f0;
             padding: 10px 20px;
             border-radius: 30px;
-            font-family: 'Caveat', cursive;
-            font-size: 1.5em;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1em;
             color: #2c5282;
             transition: all 0.3s ease;
             border: 2px solid transparent;
@@ -304,8 +324,9 @@
             box-shadow: 0 15px 30px rgba(0,0,0,0.2);
             background-image: linear-gradient(45deg, #f8f0e0 95%, #e8d8c0 100%);
             border: 2px solid #c0a878;
-            border-bottom: 4px solid #C69C6D; /* Gold accent */
+            border-bottom: 4px solid #C69C6D;
             overflow: hidden;
+            font-family: 'Inter', sans-serif;
         }
         
         .scroll-container::before {
@@ -332,10 +353,11 @@
         
         .scroll-content {
             padding: 30px 20px;
-            font-family: 'Caveat', cursive;
+            font-family: 'Inter', sans-serif;
         }
         
         .scroll-title {
+            font-family: 'Inter', sans-serif;
             font-size: 3.5em;
             text-align: center;
             color: #2c5282;
@@ -343,10 +365,11 @@
             text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
             border-bottom: 3px dashed #c0a878;
             padding-bottom: 20px;
+            font-weight: 700;
         }
         
         .journey-item {
-            font-size: 1.8em;
+            font-size: 1.2em;
             margin-bottom: 25px;
             padding: 15px 25px;
             background: rgba(255, 255, 255, 0.7);
@@ -360,11 +383,12 @@
             align-items: center;
             gap: 20px;
             transition: transform 0.3s ease, border-color 0.3s ease;
+            font-family: 'Inter', sans-serif;
         }
         
         .journey-item:hover {
             transform: translateX(10px);
-            border-left-color: #C69C6D; /* Gold accent on hover */
+            border-left-color: #C69C6D;
             background: rgba(255, 255, 255, 0.9);
         }
         
@@ -394,6 +418,7 @@
             color: #2c5282;
             min-width: 200px;
             font-size: 1em;
+            font-family: 'Inter', sans-serif;
         }
         
         .journey-details {
@@ -403,12 +428,14 @@
         .journey-title {
             font-weight: 600;
             color: #0a3147;
+            font-family: 'Inter', sans-serif;
         }
         
         .journey-company {
             color: #4a5568;
             font-size: 0.9em;
             margin-left: 10px;
+            font-family: 'Inter', sans-serif;
         }
         
         .journey-education {
@@ -417,11 +444,12 @@
             background: rgba(44, 82, 130, 0.1);
             border-radius: 50px;
             text-align: center;
-            font-size: 1.8em;
+            font-size: 1.3em;
             border: 2px dashed #2c5282;
-            border-bottom: 4px solid #C69C6D; /* Gold accent */
+            border-bottom: 4px solid #C69C6D;
             opacity: 0;
             animation: fadeInRow 0.5s ease 2.0s forwards;
+            font-family: 'Inter', sans-serif;
         }
         
         /* ===== BLOG STYLES ===== */
@@ -433,8 +461,8 @@
         }
         
         .blog-title-item {
-            font-family: 'Caveat', cursive;
-            font-size: 2.2em;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.6em;
             color: #2c5282;
             padding: 15px 25px;
             background: #f8fafc;
@@ -448,7 +476,7 @@
         
         .blog-title-item:hover {
             transform: translateX(10px);
-            border-color: #C69C6D; /* Gold accent */
+            border-color: #C69C6D;
             border-left-color: #C69C6D;
             background: #fff5e6;
             color: #C69C6D;
@@ -461,8 +489,9 @@
             background: #f8fafc;
             border-radius: 20px;
             border-left: 6px solid #2c5282;
-            border-bottom: 4px solid #C69C6D; /* Gold accent */
+            border-bottom: 4px solid #C69C6D;
             animation: fadeIn 0.5s ease;
+            font-family: 'Inter', sans-serif;
         }
         
         .blog-article-content.active {
@@ -475,33 +504,38 @@
         }
         
         .blog-article-title {
-            font-family: 'Caveat', cursive;
-            font-size: 2.5em;
+            font-family: 'Inter', sans-serif;
+            font-size: 2.2em;
             color: #0a3147;
             margin-bottom: 25px;
             border-bottom: 3px solid #2c5282;
             padding-bottom: 10px;
+            font-weight: 700;
         }
         
         .blog-text {
-            font-family: 'Caveat', cursive;
-            font-size: 1.4em;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1em;
             line-height: 1.8;
             color: #2d3748;
         }
         
         .blog-text h4 {
-            font-size: 1.8em;
+            font-size: 1.6em;
             color: #2c5282;
             margin: 25px 0 15px;
-            border-left: 4px solid #C69C6D; /* Gold accent */
+            border-left: 4px solid #C69C6D;
             padding-left: 15px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
         }
         
         .blog-text h5 {
-            font-size: 1.5em;
+            font-size: 1.3em;
             color: #2c5282;
             margin: 20px 0 10px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
         }
         
         .blog-text ul {
@@ -511,10 +545,12 @@
         
         .blog-text li {
             margin-bottom: 8px;
+            font-family: 'Inter', sans-serif;
         }
         
         .blog-text strong {
-            color: #C69C6D; /* Gold accent for emphasis */
+            color: #C69C6D;
+            font-family: 'Inter', sans-serif;
         }
         
         .references {
@@ -523,12 +559,12 @@
             background: #e6f0ff;
             border-radius: 15px;
             border-left: 6px solid #2c5282;
-            border-bottom: 3px solid #C69C6D; /* Gold accent */
+            border-bottom: 3px solid #C69C6D;
         }
         
         .references p {
-            font-family: 'Caveat', cursive;
-            font-size: 1.2em;
+            font-family: 'Inter', sans-serif;
+            font-size: 1em;
             margin-bottom: 5px;
         }
         
@@ -538,8 +574,9 @@
             border-radius: 10px;
             margin: 15px 0;
             border-left: 4px solid #2c5282;
-            border-bottom: 2px solid #C69C6D; /* Gold accent */
+            border-bottom: 2px solid #C69C6D;
             font-style: italic;
+            font-family: 'Inter', sans-serif;
         }
         
         /* ===== CONTACT STYLES ===== */
@@ -563,24 +600,25 @@
         .contact-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            border-bottom-color: #C69C6D; /* Gold accent on hover */
+            border-bottom-color: #C69C6D;
         }
         
         .contact-card h4 {
-            font-family: 'Caveat', cursive;
-            font-size: 2.2em;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.8em;
             color: #2c5282;
             margin-bottom: 15px;
             transition: color 0.3s;
+            font-weight: 600;
         }
         
         .contact-card:hover h4 {
-            color: #C69C6D; /* Gold accent on hover */
+            color: #C69C6D;
         }
         
         .contact-value {
-            font-family: 'Caveat', cursive;
-            font-size: 1.8em;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.4em;
             color: #0a3147;
             word-break: break-all;
         }
@@ -590,10 +628,11 @@
             text-decoration: none;
             border-bottom: 2px solid transparent;
             transition: border-color 0.2s;
+            font-family: 'Inter', sans-serif;
         }
         
         .contact-value a:hover {
-            border-bottom-color: #C69C6D; /* Gold accent */
+            border-bottom-color: #C69C6D;
         }
         
         .linkedin-btn {
@@ -605,15 +644,15 @@
             text-decoration: none;
             margin-top: 20px;
             font-weight: 600;
-            font-family: 'Caveat', cursive;
-            font-size: 1.5em;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2em;
             transition: all 0.3s;
             border: 2px solid transparent;
             border-bottom: 4px solid #005582;
         }
         
         .linkedin-btn:hover {
-            background: #C69C6D; /* Gold accent */
+            background: #C69C6D;
             border-bottom-color: #8B6B4A;
             transform: scale(1.05);
         }
@@ -632,7 +671,7 @@
             padding: 30px;
             border: 1px solid #e2e8f0;
             border-left: 6px solid #2c5282;
-            border-bottom: 4px solid #C69C6D; /* Gold accent */
+            border-bottom: 4px solid #C69C6D;
             transition: all 0.3s;
         }
         
@@ -643,14 +682,15 @@
         }
         
         .service-item h4 {
-            font-family: 'Caveat', cursive;
+            font-family: 'Inter', sans-serif;
             color: #0a3147;
             margin-top: 0;
             margin-bottom: 20px;
-            font-size: 2em;
+            font-size: 1.6em;
             border-bottom: 3px solid #cbd5e0;
             padding-bottom: 12px;
             transition: border-color 0.3s;
+            font-weight: 600;
         }
         
         .service-item:hover h4 {
@@ -658,8 +698,13 @@
         }
         
         .service-item p, .service-item li {
-            font-family: 'Caveat', cursive;
-            font-size: 1.3em;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1em;
+        }
+        
+        .service-item strong {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
         }
         
         .benefits-box {
@@ -668,12 +713,12 @@
             padding: 20px;
             margin-top: 20px;
             border-left: 6px solid #2c5282;
-            border-bottom: 3px solid #C69C6D; /* Gold accent */
+            border-bottom: 3px solid #C69C6D;
         }
         
         .benefits-box p {
-            font-family: 'Caveat', cursive;
-            font-size: 1.3em;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1em;
         }
         
         /* ===== FOOTER ===== */
@@ -681,10 +726,10 @@
             text-align: center;
             padding: 30px 20px;
             color: #4a5568;
-            font-family: 'Caveat', cursive;
-            font-size: 1.6em;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4em;
             width: 100%;
-            border-top: 4px solid #C69C6D; /* Gold accent */
+            border-top: 4px solid #C69C6D;
             position: relative;
             z-index: 1;
         }
@@ -740,7 +785,7 @@
             }
             
             .section-card h3 {
-                font-size: 1.6em;
+                font-size: 1.4em;
             }
             
             .logo {
@@ -788,11 +833,15 @@
                 height: 300px;
             }
             
+            .section-card h3 {
+                font-size: 1.4em;
+            }
+            
             .journey-item {
                 flex-direction: column;
                 text-align: center;
                 gap: 5px;
-                font-size: 1.5em;
+                font-size: 1.1em;
             }
             
             .journey-date {
@@ -807,12 +856,24 @@
                 font-size: 2.5em;
             }
             
+            .expanded-content h3 {
+                font-size: 1.8em;
+            }
+            
             .services-grid {
                 grid-template-columns: 1fr;
             }
             
             .blog-title-item {
+                font-size: 1.4em;
+            }
+            
+            .blog-article-title {
                 font-size: 1.8em;
+            }
+            
+            .blog-text {
+                font-size: 1em;
             }
         }
     </style>
@@ -869,7 +930,7 @@
             <button class="close-btn" onclick="toggleSection('about')">×</button>
             <h2>About Me</h2>
             
-            <div style="font-size: 1.8em; line-height: 1.8; color: #2d3748; background: #f8fafc; padding: 30px; border-radius: 18px; font-family: 'Caveat', cursive; border-bottom: 3px solid #C69C6D;">
+            <div style="font-size: 1.2em; line-height: 1.8; color: #2d3748; background: #f8fafc; padding: 30px; border-radius: 18px; border-bottom: 3px solid #C69C6D;">
                 <p style="margin: 0;">Transformational Enterprise Quality Executive driving regulatory confidence and commercial agility through innovative Quality Systems. Over 20 years of global experience building and leading high-performing quality organizations across Pharma, Biotech, and CROs. Proven record of designing enterprise QMS that reduce compliance risk while accelerating digital transformation (AI, eQMS) and influencing regulatory policy. Adept at engaging boards and health authorities to position quality as a strategic business enabler.</p>
             </div>
             
@@ -1338,8 +1399,8 @@
             </div>
             
             <div style="text-align: center; margin-top: 40px; padding: 25px; background: #f8fafc; border-radius: 18px; border-bottom: 3px solid #C69C6D;">
-                <p style="font-family: 'Caveat', cursive; font-size: 1.8em; color: #0a3147;">Available for consulting engagements and quality leadership opportunities.</p>
-                <p style="font-family: 'Caveat', cursive; color: #2c5282; margin-top: 15px; font-size: 1.5em;">Based in Switzerland | Global availability</p>
+                <p style="font-family: 'Inter', sans-serif; font-size: 1.3em; color: #0a3147;">Available for consulting engagements and quality leadership opportunities.</p>
+                <p style="font-family: 'Inter', sans-serif; color: #2c5282; margin-top: 15px; font-size: 1.2em;">Based in Switzerland | Global availability</p>
             </div>
         </div>
     </div>
