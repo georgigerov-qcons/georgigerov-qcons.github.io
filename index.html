@@ -99,7 +99,7 @@
         /* Book a Call Button - Aligned with Card Colors */
         .book-call-btn {
             display: inline-block;
-            background: #2c5282;  /* Same as card text color */
+            background: #2c5282;
             color: white;
             font-family: 'Montserrat', sans-serif;
             font-size: 1.2em;
@@ -114,10 +114,10 @@
         }
         
         .book-call-btn:hover {
-            background: #C69C6D;  /* Matches card hover accent color */
+            background: #C69C6D;
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(198, 156, 109, 0.4);
-            border-color: #2c5282;  /* Matches card border color on hover */
+            border-color: #2c5282;
         }
         
         /* ===== MAIN CONTENT - CARDS CENTERED ===== */
@@ -323,33 +323,6 @@
         .expanded-content span,
         .expanded-content div {
             font-family: 'Inter', sans-serif;
-        }
-        
-        /* About Me Tags - Inter */
-        .tag-cloud {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 30px;
-        }
-        
-        .tag {
-            background: #e2e8f0;
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-family: 'Inter', sans-serif;
-            font-size: 1.1em;
-            color: #2c5282;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-        
-        .tag:hover {
-            background: #C69C6D;
-            color: white;
-            transform: scale(1.05);
-            border-color: #2c5282;
         }
         
         /* ===== SCROLL ANIMATION STYLES ===== */
@@ -698,7 +671,7 @@
         /* ===== SERVICES GRID ===== */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
             gap: 30px;
             margin-top: 25px;
         }
@@ -724,7 +697,7 @@
             color: #0a3147;
             margin-top: 0;
             margin-bottom: 20px;
-            font-size: 1.6em;
+            font-size: 1.5em;
             border-bottom: 3px solid #cbd5e0;
             padding-bottom: 12px;
             transition: border-color 0.3s;
@@ -737,12 +710,14 @@
         
         .service-item p, .service-item li {
             font-family: 'Inter', sans-serif;
-            font-size: 1.1em;
+            font-size: 1em;
+            line-height: 1.6;
         }
         
         .service-item strong {
             font-family: 'Inter', sans-serif;
             font-weight: 600;
+            color: #2c5282;
         }
         
         .benefits-box {
@@ -756,7 +731,7 @@
         
         .benefits-box p {
             font-family: 'Inter', sans-serif;
-            font-size: 1.1em;
+            font-size: 1em;
         }
         
         /* ===== FOOTER ===== */
@@ -778,7 +753,7 @@
         }
         
         li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         
         hr {
@@ -819,6 +794,10 @@
                 font-size: 1em;
                 padding: 10px 28px;
             }
+            
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            }
         }
         
         @media (max-width: 900px) {
@@ -855,6 +834,10 @@
             .book-call-btn {
                 font-size: 0.9em;
                 padding: 8px 24px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
             }
         }
         
@@ -930,6 +913,10 @@
                 grid-template-columns: 1fr;
             }
             
+            .service-item h4 {
+                font-size: 1.3em;
+            }
+            
             .blog-title-item {
                 font-size: 1.4em;
             }
@@ -993,21 +980,23 @@
             </div>
         </div>
 
-        <!-- ABOUT ME Expanded -->
+        <!-- ABOUT ME Expanded - New Text, No Tags -->
         <div id="about" class="expanded-content">
             <button class="close-btn" onclick="toggleSection('about')">×</button>
-            <h2>About Me</h2>
+            <h2>Why Work With Me</h2>
             
-            <div style="font-size: 1.2em; line-height: 1.8; color: #2d3748; background: #f8fafc; padding: 30px; border-radius: 18px; border-bottom: 3px solid #C69C6D;">
-                <p style="margin: 0;">Transformational Enterprise Quality Executive driving regulatory confidence and commercial agility through innovative Quality Systems. Over 20 years of global experience building and leading high-performing quality organizations across Pharma, Biotech, and CROs. Proven record of designing enterprise QMS that reduce compliance risk while accelerating digital transformation (AI, eQMS) and influencing regulatory policy. Adept at engaging boards and health authorities to position quality as a strategic business enabler.</p>
-            </div>
-            
-            <div class="tag-cloud">
-                <span class="tag">Pharma</span>
-                <span class="tag">Biotech</span>
-                <span class="tag">CROs</span>
-                <span class="tag">AI & eQMS</span>
-                <span class="tag">Global Experience</span>
+            <div style="font-size: 1.1em; line-height: 1.8; color: #2d3748; background: #f8fafc; padding: 35px; border-radius: 18px; border-bottom: 3px solid #C69C6D;">
+                <p style="margin-bottom: 20px;">There are many quality consultants who know the regulations. Fewer understand how quality actually works inside a real organisation — the politics, the pressure, the gap between what the SOP says and what happens on the ground. That gap is where compliance breaks down. And closing it is what I do.</p>
+                
+                <p style="margin-bottom: 20px;">I bring over 20 years of hands-on quality leadership across some of the most demanding environments in global pharma, biotech, and contract research. From my early years as a Clinical Research Associate to Senior Director roles, I have built, led, and transformed quality functions across EMEA and beyond — always with one goal in mind: quality that works in practice, not just on paper.</p>
+                
+                <p style="margin-bottom: 20px;">I started my career as a practicing physician. That foundation shapes everything I do. When I talk about patient safety, data integrity, and clinical trial quality, it is not regulatory language to me — it is personal. Every SOP I write, every audit I conduct, and every team I train is ultimately in service of one thing: getting safe, effective therapies to the patients who need them.</p>
+                
+                <p style="margin-bottom: 20px;">What sets me apart is not just technical expertise — it is the ability to operate at every level of an organisation simultaneously. I speak the language of boards and health authorities, and I speak the language of the QA associate writing their first deviation report. I have sat in RA inspections rooms. I have coached SMEs through their first regulatory interview. I have rebuilt QMS frameworks from the ground up and guided organisations through critical findings — and I have seen what separates the companies that thrive under regulatory scrutiny from those that do not.</p>
+                
+                <p style="margin-bottom: 20px;">I work with Pharma companies, Biotech startups, and CROs who are serious about quality — not as a compliance exercise, but as a strategic advantage. Whether you need to prepare for an imminent inspection, overhaul your QMS, build your team's capability, or navigate a complex regulatory challenge, I bring the experience, the judgment, and the commitment to deliver — not just a report, but a real, lasting outcome.</p>
+                
+                <p><strong>Based in Switzerland. Available globally. Fluent in the language of quality, compliance, and results.</strong></p>
             </div>
         </div>
 
@@ -1097,7 +1086,7 @@
             </div>
         </div>
 
-        <!-- MY SERVICES Expanded -->
+        <!-- MY SERVICES Expanded - Updated Content -->
         <div id="services" class="expanded-content">
             <button class="close-btn" onclick="toggleSection('services')">×</button>
             <h2>My Services</h2>
@@ -1106,112 +1095,80 @@
                 <!-- Service 1 -->
                 <div class="service-item">
                     <h4>1. Quality Management System (QMS) Development & Optimization</h4>
-                    <p><strong>Services Offered:</strong></p>
-                    <ul>
-                        <li>Design, implementation, and global harmonization of QMS aligned with ICH GCP, ISO 9001, and regional regulatory frameworks.</li>
-                        <li>Streamlining documentation control, Serious Breach, CAPA, change management, and deviation management systems.</li>
-                        <li>Development and revision of corporate SOP frameworks and quality governance models.</li>
-                    </ul>
+                    <p>Your QMS should be the backbone of your business — not a source of audit risk, regional inconsistency, or operational friction. If your quality system has grown into a patchwork of disconnected SOPs, unclear ownership, and compliance gaps, you are not alone. Most organisations reach a point where their QMS no longer reflects how they actually operate.</p>
+                    <p style="margin-top: 15px;">I design, implement, and globally harmonize QMS frameworks that are fully aligned with ICH GCP, ISO 9001, and regional regulatory requirements. From documentation control and CAPA to change management and deviation handling, I build systems that are rigorous enough to satisfy any regulator — and practical enough for your teams to use every day.</p>
                     <div class="benefits-box">
-                        <p><strong>Benefits:</strong> Harmonized, compliant, and agile QMS structure supporting business scalability. Reduced operational complexity and enhanced alignment across regions. Improved audit and inspection readiness.</p>
+                        <p><strong>What this means for you:</strong> A harmonized, scalable, inspection-ready QMS that reduces compliance risk, eliminates regional inconsistency, and gives your organisation the agility to grow without quality becoming a bottleneck.</p>
                     </div>
                 </div>
                 
                 <!-- Service 2 -->
                 <div class="service-item">
                     <h4>2. Inspection Readiness & Regulatory Compliance</h4>
-                    <p><strong>Services Offered:</strong></p>
-                    <ul>
-                        <li>Comprehensive inspection readiness programs (FDA, EMA, MHRA, PMDA) including pre-inspection assessments and mock audits.</li>
-                        <li>Coaching and training Subject Matter Experts (SMEs) for inspection interviews and evidence presentation.</li>
-                        <li>Development of inspection playbooks, control room strategy, and post-inspection CAPA follow-up management.</li>
-                    </ul>
+                    <p>No organisation should face an FDA, EMA, MHRA, or PMDA inspection unprepared. Yet too many companies treat inspection readiness as a last-minute scramble — assembling documents, coaching staff, and hoping for the best. Regulators notice. And the consequences of a critical finding go far beyond the inspection itself.</p>
+                    <p style="margin-top: 15px;">I build comprehensive, sustainable inspection readiness programmes designed to make every day an inspection-ready day. This includes pre-inspection gap assessments, mock audits, SME coaching for interviews and evidence presentation, inspection playbook development, and full post-inspection CAPA follow-up. I prepare your documents and your people — because regulators assess both.</p>
                     <div class="benefits-box">
-                        <p><strong>Benefits:</strong> Maintained "inspection-ready every day" culture. Reduced risk of critical findings through proactive preparation. Strengthened organizational capability in inspection performance.</p>
+                        <p><strong>What this means for you:</strong> An organisation that walks into any regulatory inspection with confidence — and walks out with its reputation, its data, and its timeline intact.</p>
                     </div>
                 </div>
                 
                 <!-- Service 3 -->
                 <div class="service-item">
                     <h4>3. Clinical Quality Assurance & GCP Oversight</h4>
-                    <p><strong>Services Offered:</strong></p>
-                    <ul>
-                        <li>Development of GCP oversight frameworks across sponsors, CROs, and investigator sites.</li>
-                        <li>Conduct of GCP audits (system, process, vendor, investigator site, and study-specific).</li>
-                        <li>Quality governance across Clinical Operations, Medical Affairs, and Pharmacovigilance.</li>
-                    </ul>
+                    <p>Maintaining consistent, demonstrable GCP compliance across sponsors, CROs, and investigator sites — especially across multiple regions and time zones — is one of the most complex challenges in clinical development. A single oversight gap can put your trial data, your submission timeline, and your patients at risk.</p>
+                    <p style="margin-top: 15px;">I build robust GCP oversight frameworks tailored to your organisation's structure and risk profile. I conduct system, process, vendor, investigator site, and study-specific audits, and provide quality governance across Clinical Operations, Medical Affairs, and Pharmacovigilance — ensuring that quality is not just documented but genuinely embedded in how your trials run.</p>
                     <div class="benefits-box">
-                        <p><strong>Benefits:</strong> Enhanced GCP compliance and data integrity across the clinical trial lifecycle. Reduced risk exposure through proactive quality oversight.</p>
+                        <p><strong>What this means for you:</strong> Full GCP compliance and data integrity across the clinical trial lifecycle, with the audit trail and governance documentation to satisfy any regulatory authority — anywhere in the world.</p>
                     </div>
                 </div>
                 
                 <!-- Service 4 -->
                 <div class="service-item">
                     <h4>4. External Service Providers & CRO Quality Oversight</h4>
-                    <p><strong>Services Offered:</strong></p>
-                    <ul>
-                        <li>Qualification, auditing, and ongoing performance monitoring of External Service Providers and CROs.</li>
-                        <li>Development of Quality Agreements and governance mechanisms for outsourced activities.</li>
-                        <li>Oversight of technology service providers, including validated IT systems and data integrity controls.</li>
-                    </ul>
+                    <p>Outsourcing to CROs and external service providers is standard practice. But outsourcing an activity does not outsource the accountability. When your ESP fails a GxP requirement, the regulatory consequences land with you — the sponsor. Many organisations discover this only when it is too late.</p>
+                    <p style="margin-top: 15px;">I design and implement end-to-end ESP and CRO quality oversight programmes — from initial qualification and audit through to ongoing performance monitoring and governance. I develop Quality Agreements with real teeth, build transparent accountability mechanisms, and oversee technology service providers including validated IT systems and data integrity controls.</p>
                     <div class="benefits-box">
-                        <p><strong>Benefits:</strong> Strengthened partnerships through clear quality expectations and accountability. Continuous performance improvement and compliance transparency.</p>
+                        <p><strong>What this means for you:</strong> Complete confidence that your external partners are meeting your quality standards — and clear, documented evidence that you have been overseeing them every step of the way.</p>
                     </div>
                 </div>
                 
                 <!-- Service 5 -->
                 <div class="service-item">
-                    <h4>5. Quality Training, Capability Building & Organizational Development</h4>
-                    <p><strong>Services Offered:</strong></p>
-                    <ul>
-                        <li>Design and delivery of bespoke QA/QC and GxP training programs, including regulatory expectations, audit skills, and inspection readiness.</li>
-                        <li>Development of competency matrices and continuous learning frameworks.</li>
-                    </ul>
+                    <h4>5. Quality Training, Capability Building & Organisational Development</h4>
+                    <p>Compliance training that simply walks staff through SOPs creates teams that know the rules — but not why the rules exist. When an inspector asks a difficult question or a deviation occurs under pressure, that distinction matters enormously. Real inspection resilience comes from genuine understanding, not checkbox completion.</p>
+                    <p style="margin-top: 15px;">I design and deliver bespoke GxP and QA training programmes that build true competency — covering regulatory expectations, audit skills, inspection readiness, data integrity, and risk-based thinking. I develop competency frameworks and continuous learning structures tailored to your organisation's size, maturity, and regulatory footprint.</p>
                     <div class="benefits-box">
-                        <p><strong>Benefits:</strong> Empowered teams with consistent quality knowledge and inspection confidence. Improved quality ownership across functions.</p>
+                        <p><strong>What this means for you:</strong> A workforce that owns quality — not just follows it. Teams that perform under inspection pressure, escalate the right issues, and actively contribute to a culture of continuous improvement.</p>
                     </div>
                 </div>
                 
                 <!-- Service 6 -->
                 <div class="service-item">
                     <h4>6. Quality Risk Management & Continuous Improvement</h4>
-                    <p><strong>Services Offered:</strong></p>
-                    <ul>
-                        <li>Implementation of ICH Q9(R1)-based risk management frameworks.</li>
-                        <li>Serious Breach Management coordination and oversight.</li>
-                        <li>Development of Key Quality Indicators (KQIs) and dashboards.</li>
-                        <li>Facilitation of root cause analysis and CAPA effectiveness checks.</li>
-                    </ul>
+                    <p>Most quality failures do not come without warning. The signals were there — in deviations, near-misses, audit trends, and KPI drift — but were not acted on in time. Reactive quality management is expensive, disruptive, and increasingly unacceptable to modern regulators who expect evidence of proactive risk control.</p>
+                    <p style="margin-top: 15px;">I implement ICH Q9(R1)-based risk management frameworks that identify, prioritise, and mitigate quality risks before they become findings. I establish Key Quality Indicators and real-time dashboards, coordinate Serious Breach Management, and facilitate rigorous root cause analysis and CAPA effectiveness reviews — building a continuous improvement engine into the heart of your quality function.</p>
                     <div class="benefits-box">
-                        <p><strong>Benefits:</strong> Proactive detection and mitigation of compliance risks. Evidence-based decision-making through data-driven metrics.</p>
+                        <p><strong>What this means for you:</strong> A shift from reactive firefighting to proactive quality control — with the data, metrics, and documented evidence to demonstrate risk-based oversight to any regulatory authority.</p>
                     </div>
                 </div>
                 
                 <!-- Service 7 -->
                 <div class="service-item">
                     <h4>7. Digital Quality Transformation</h4>
-                    <p><strong>Services Offered:</strong></p>
-                    <ul>
-                        <li>Implementation and optimization of eQMS, DMS, and LMS platforms.</li>
-                        <li>Digitalization of quality workflows including CAPA and audit management.</li>
-                        <li>Integration of data analytics for real-time quality performance monitoring.</li>
-                    </ul>
+                    <p>If your quality function still runs on spreadsheets, shared drives, or disconnected legacy systems, you are not just inefficient — you are exposed. Manual processes create data integrity risks, audit trail gaps, and the kind of findings that generate FDA warning letters and EMA inspection observations.</p>
+                    <p style="margin-top: 15px;">I lead the implementation and optimisation of eQMS, DMS, and LMS platforms — transforming paper-based and fragmented quality workflows into integrated, validated digital systems. I digitalise CAPA, audit management, and document control, and integrate data analytics for real-time quality performance monitoring. I also build governance frameworks for AI and advanced analytics tools, ensuring their use in clinical and quality processes is validated, transparent, and regulator-ready.</p>
                     <div class="benefits-box">
-                        <p><strong>Benefits:</strong> Increased operational efficiency through automation. Real-time access to quality insights.</p>
+                        <p><strong>What this means for you:</strong> A digitally mature quality function that operates with greater speed, accuracy, and data integrity — and positions your organisation at the forefront of modern regulatory expectations.</p>
                     </div>
                 </div>
                 
                 <!-- Service 8 -->
                 <div class="service-item">
                     <h4>8. Audit & Inspection Management</h4>
-                    <p><strong>Services Offered:</strong></p>
-                    <ul>
-                        <li>Conduct of internal, external, and for-cause audits across GxP areas.</li>
-                        <li>Development of global audit programs based on risk.</li>
-                        <li>CAPA oversight and trend analysis.</li>
-                    </ul>
+                    <p>An audit programme that simply ticks boxes is not protecting your organisation — it is creating a false sense of security. Regulators expect risk-based audit planning, consistent execution, and evidence that findings are driving genuine systemic improvement. Anything less is a vulnerability waiting to be exposed.</p>
+                    <p style="margin-top: 15px;">I design and execute global audit programmes that cover the full spectrum — internal, external, and for-cause audits across all GxP areas. Every programme is built on a risk-based foundation, with full CAPA oversight, trend analysis, and leadership reporting built in. I bring the experience of hundreds of audits across pharma, biotech, and CROs — and the judgment to distinguish a documentation gap from a systemic quality failure.</p>
                     <div class="benefits-box">
-                        <p><strong>Benefits:</strong> End-to-end visibility of compliance maturity. Improved regulatory inspection outcomes.</p>
+                        <p><strong>What this means for you:</strong> Clear, unvarnished visibility of your true compliance maturity — and a systematic, evidence-based path to resolving gaps before a regulator finds them for you.</p>
                     </div>
                 </div>
             </div>
