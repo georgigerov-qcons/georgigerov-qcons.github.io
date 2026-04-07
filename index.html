@@ -4,16 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Georgi Gerov | Enterprise Quality Consultant</title>
-    <!-- Google Fonts for Montserrat (main) and Inter (expanded) -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* ===== RESET & BASE STYLES ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
@@ -25,22 +18,13 @@
             display: flex;
             flex-direction: column;
         }
-        
-        /* Subtle noise texture overlay */
         body::before {
             content: "";
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJmIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc0IiBudW1PY3RhdmVzPSIzIiAvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNmKSIgb3BhY2l0eT0iMC4wNCIgLz48L3N2Zz4=');
-            pointer-events: none;
-            opacity: 0.15;
-            z-index: 0;
+            pointer-events: none; opacity: 0.15; z-index: 0;
         }
-        
-        /* ===== HEADER WITH LOGO AND TITLE ON SAME ROW ===== */
         .header {
             padding: 20px 50px;
             background: transparent;
@@ -51,427 +35,51 @@
             position: relative;
             z-index: 1;
         }
-        
-        .logo {
-            height: 350px;
-            width: auto;
-            max-width: 980px;
-            object-fit: contain;
-            filter: drop-shadow(0 15px 25px rgba(44, 82, 130, 0.25));
-        }
-        
-        .header-title {
-            flex: 1;
-        }
-        
-        .header-title h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 4.5em;
-            color: #0a3147;
-            margin-bottom: 5px;
-            font-weight: 700;
-            text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
-            line-height: 1.2;
-        }
-        
-        /* Main subtitle - larger text */
-        .header-title .main-subtitle {
-            font-family: 'Montserrat', sans-serif;
-            color: #2c5282;
-            font-size: 1.8em;
-            font-weight: 600;
-            line-height: 1.3;
-            margin-bottom: 15px;
-            letter-spacing: -0.02em;
-        }
-        
-        /* Secondary subtitle - smaller text */
-        .header-title .secondary-subtitle {
-            font-family: 'Montserrat', sans-serif;
-            color: #4a5568;
-            font-size: 1.2em;
-            font-weight: 500;
-            line-height: 1.4;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-        
-        /* Book a Call Button - Aligned with Card Colors */
-        .book-call-btn {
-            display: inline-block;
-            background: #2c5282;
-            color: white;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.2em;
-            font-weight: 600;
-            padding: 12px 32px;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            box-shadow: 0 4px 10px rgba(44, 82, 130, 0.3);
-            margin-top: 5px;
-        }
-        
-        .book-call-btn:hover {
-            background: #C69C6D;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(198, 156, 109, 0.4);
-            border-color: #2c5282;
-        }
-        
-        /* ===== MAIN CONTENT - CARDS CENTERED ===== */
-        .main-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px 20px 40px;
-            max-width: 1400px;
-            margin: 0 auto;
-            width: 100%;
-            position: relative;
-            z-index: 1;
-        }
-        
-        /* Horizontal Card Grid - ALL CARDS VISIBLE WITHOUT SCROLLING */
-        .section-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            margin: 30px 0;
-        }
-        
-        /* Individual Card - ALL SAME SIZE with accent color */
-        .section-card {
-            flex: 0 0 calc(16.666% - 21px);
-            min-width: 180px;
-            max-width: 200px;
-            height: 280px;
-            background: white;
-            padding: 25px 15px 20px;
-            border-radius: 24px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            box-shadow: 0 20px 35px rgba(0, 20, 40, 0.15);
-            border: 3px solid transparent;
-            border-bottom: 4px solid transparent;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        /* Subtle accent corner */
-        .section-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 0 30px 30px 0;
-            border-color: transparent #C69C6D transparent transparent;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .section-card:hover::before {
-            opacity: 0.3;
-        }
-        
-        .section-card:hover {
-            transform: translateY(-15px);
-            border-color: #C69C6D;
-            border-bottom-color: #C69C6D;
-            box-shadow: 0 25px 45px rgba(198, 156, 109, 0.25);
-        }
-        
-        .section-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: #2c5282;
-            font-size: 1.4em;
-            margin-top: 12px;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-        
-        .section-card:hover h3 {
-            color: #C69C6D;
-        }
-        
-        /* Card with photo - only for About Me */
-        .profile-photo {
-            width: 85px;
-            height: 85px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 8px;
-            border: 3px solid #2c5282;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            transition: border-color 0.3s ease;
-        }
-        
-        .section-card:hover .profile-photo {
-            border-color: #C69C6D;
-        }
-        
-        /* Card image styling - ALL SAME SIZE */
-        .card-image {
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
-            margin-bottom: 8px;
-            filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.2));
-            transition: filter 0.3s ease;
-        }
-        
-        .section-card:hover .card-image {
-            filter: drop-shadow(0 8px 12px rgba(198, 156, 109, 0.4));
-        }
-        
-        /* ===== EXPANDED CONTENT AREA - ALL TEXT USES INTER FONT ===== */
-        .expanded-content {
-            display: none;
-            margin: 40px 0 50px;
-            padding: 45px;
-            background: white;
-            border-radius: 30px;
-            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.15);
-            border-left: 8px solid #2c5282;
-            border-bottom: 4px solid #C69C6D;
-            animation: slideDown 0.5s ease;
-            width: 100%;
-            position: relative;
-            z-index: 2;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .expanded-content.active {
-            display: block;
-        }
-        
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Close Button */
-        .close-btn {
-            float: right;
-            background: none;
-            border: none;
-            font-size: 3em;
-            cursor: pointer;
-            color: #a0aec0;
-            line-height: 1;
-            padding: 0 15px;
-            transition: color 0.2s;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .close-btn:hover {
-            color: #C69C6D;
-        }
-        
-        /* Section Headers - Inter */
-        .expanded-content h2 {
-            font-family: 'Inter', sans-serif;
-            color: #0a3147;
-            font-size: 3.5em;
-            margin-bottom: 30px;
-            border-bottom: 4px solid #e2e8f0;
-            padding-bottom: 20px;
-            font-weight: 700;
-        }
-        
-        .expanded-content h3 {
-            font-family: 'Inter', sans-serif;
-            color: #2c5282;
-            font-size: 2.5em;
-            margin: 30px 0 20px;
-            font-weight: 600;
-        }
-        
-        .expanded-content h4 {
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-        }
-        
-        .expanded-content h5 {
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-        }
-        
-        .expanded-content p, 
-        .expanded-content li, 
-        .expanded-content span,
-        .expanded-content div {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        /* Client Profile Cards for Who I Work With */
-        .client-profiles {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-            margin-top: 20px;
-        }
-        
-        .client-card {
-            background: #f8fafc;
-            border-radius: 20px;
-            padding: 25px;
-            border-left: 6px solid #2c5282;
-            border-bottom: 3px solid #C69C6D;
-            transition: all 0.3s;
-            height: 100%;
-        }
-        
-        .client-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(44, 82, 130, 0.15);
-        }
-        
-        .client-card h4 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.6em;
-            color: #2c5282;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        
-        .client-card p {
-            font-family: 'Inter', sans-serif;
-            font-size: 1em;
-            line-height: 1.6;
-            color: #2d3748;
-        }
-        
-        .discovery-box {
-            background: #e6f0ff;
-            border-radius: 16px;
-            padding: 25px;
-            margin-top: 30px;
-            text-align: center;
-            border-left: 6px solid #2c5282;
-            border-bottom: 3px solid #C69C6D;
-        }
-        
-        .discovery-box p {
-            font-size: 1.1em;
-            margin-bottom: 15px;
-        }
-        
-        .discovery-link {
-            display: inline-block;
-            background: #2c5282;
-            color: white;
-            padding: 10px 28px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .discovery-link:hover {
-            background: #C69C6D;
-            transform: scale(1.02);
-        }
-        
-        /* ===== SCROLL ANIMATION STYLES ===== */
-        .scroll-container {
-            position: relative;
-            min-height: 500px;
-            background: #f8f0e0;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-            background-image: linear-gradient(45deg, #f8f0e0 95%, #e8d8c0 100%);
-            border: 2px solid #c0a878;
-            border-bottom: 4px solid #C69C6D;
-            overflow: hidden;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .scroll-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 30px;
-            background: linear-gradient(to bottom, #d4b88c, #f8f0e0);
-            border-bottom: 2px solid #c0a878;
-        }
-        
-        .scroll-container::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 30px;
-            background: linear-gradient(to top, #d4b88c, #f8f0e0);
-            border-top: 2px solid #c0a878;
-        }
-        
-        .scroll-content {
-            padding: 30px 20px;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .scroll-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 3.5em;
-            text-align: center;
-            color: #2c5282;
-            margin-bottom: 30px;
-            text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
-            border-bottom: 3px dashed #c0a878;
-            padding-bottom: 20px;
-            font-weight: 700;
-        }
-        
-        .journey-item {
-            font-size: 1.2em;
-            margin-bottom: 25px;
-            padding: 15px 25px;
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 50px;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
-            border: 1px solid #d4b88c;
-            border-left: 4px solid #2c5282;
-            opacity: 0;
-            animation: fadeInRow 0.5s ease forwards;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .journey-item:hover {
-            transform: translateX(10px);
-            border-left-color: #C69C6D;
-            background: rgba(255, 255, 255, 0.9);
-        }
-        
+        .logo { height: 350px; width: auto; max-width: 980px; object-fit: contain; filter: drop-shadow(0 15px 25px rgba(44, 82, 130, 0.25)); }
+        .header-title { flex: 1; }
+        .header-title h1 { font-family: 'Montserrat', sans-serif; font-size: 4.5em; color: #0a3147; margin-bottom: 5px; font-weight: 700; text-shadow: 2px 2px 3px rgba(0,0,0,0.1); line-height: 1.2; }
+        .header-title .main-subtitle { font-family: 'Montserrat', sans-serif; color: #2c5282; font-size: 1.8em; font-weight: 600; line-height: 1.3; margin-bottom: 15px; letter-spacing: -0.02em; }
+        .header-title .secondary-subtitle { font-family: 'Montserrat', sans-serif; color: #4a5568; font-size: 1.2em; font-weight: 500; line-height: 1.4; font-style: italic; margin-bottom: 20px; }
+        .book-call-btn { display: inline-block; background: #2c5282; color: white; font-family: 'Montserrat', sans-serif; font-size: 1.2em; font-weight: 600; padding: 12px 32px; border-radius: 50px; text-decoration: none; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 10px rgba(44, 82, 130, 0.3); margin-top: 5px; }
+        .book-call-btn:hover { background: #C69C6D; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(198, 156, 109, 0.4); border-color: #2c5282; }
+        .main-content { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px 20px 40px; max-width: 1400px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
+        .section-grid { display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; align-items: center; width: 100%; margin: 30px 0; }
+        .section-card { flex: 0 0 calc(16.666% - 21px); min-width: 180px; max-width: 200px; height: 280px; background: white; padding: 25px 15px 20px; border-radius: 24px; text-align: center; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 20px 35px rgba(0, 20, 40, 0.15); border: 3px solid transparent; border-bottom: 4px solid transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+        .section-card::before { content: ''; position: absolute; top: 0; right: 0; width: 0; height: 0; border-style: solid; border-width: 0 30px 30px 0; border-color: transparent #C69C6D transparent transparent; opacity: 0; transition: opacity 0.3s ease; }
+        .section-card:hover::before { opacity: 0.3; }
+        .section-card:hover { transform: translateY(-15px); border-color: #C69C6D; border-bottom-color: #C69C6D; box-shadow: 0 25px 45px rgba(198, 156, 109, 0.25); }
+        .section-card h3 { font-family: 'Montserrat', sans-serif; color: #2c5282; font-size: 1.4em; margin-top: 12px; font-weight: 600; transition: color 0.3s ease; }
+        .section-card:hover h3 { color: #C69C6D; }
+        .profile-photo { width: 85px; height: 85px; border-radius: 50%; object-fit: cover; margin-bottom: 8px; border: 3px solid #2c5282; box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: border-color 0.3s ease; }
+        .section-card:hover .profile-photo { border-color: #C69C6D; }
+        .card-image { width: 70px; height: 70px; object-fit: contain; margin-bottom: 8px; filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.2)); transition: filter 0.3s ease; }
+        .section-card:hover .card-image { filter: drop-shadow(0 8px 12px rgba(198, 156, 109, 0.4)); }
+        .expanded-content { display: none; margin: 40px 0 50px; padding: 45px; background: white; border-radius: 30px; box-shadow: 0 30px 50px rgba(0, 0, 0, 0.15); border-left: 8px solid #2c5282; border-bottom: 4px solid #C69C6D; animation: slideDown 0.5s ease; width: 100%; position: relative; z-index: 2; font-family: 'Inter', sans-serif; }
+        .expanded-content.active { display: block; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+        .close-btn { float: right; background: none; border: none; font-size: 3em; cursor: pointer; color: #a0aec0; line-height: 1; padding: 0 15px; transition: color 0.2s; font-family: 'Inter', sans-serif; }
+        .close-btn:hover { color: #C69C6D; }
+        .expanded-content h2 { font-family: 'Inter', sans-serif; color: #0a3147; font-size: 3.5em; margin-bottom: 30px; border-bottom: 4px solid #e2e8f0; padding-bottom: 20px; font-weight: 700; }
+        .expanded-content h3 { font-family: 'Inter', sans-serif; color: #2c5282; font-size: 2.5em; margin: 30px 0 20px; font-weight: 600; }
+        .expanded-content h4 { font-family: 'Inter', sans-serif; font-weight: 600; }
+        .expanded-content h5 { font-family: 'Inter', sans-serif; font-weight: 600; }
+        .expanded-content p, .expanded-content li, .expanded-content span, .expanded-content div { font-family: 'Inter', sans-serif; }
+        .client-profiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin-top: 20px; }
+        .client-card { background: #f8fafc; border-radius: 20px; padding: 25px; border-left: 6px solid #2c5282; border-bottom: 3px solid #C69C6D; transition: all 0.3s; height: 100%; }
+        .client-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(44, 82, 130, 0.15); }
+        .client-card h4 { font-family: 'Inter', sans-serif; font-size: 1.6em; color: #2c5282; margin-bottom: 15px; font-weight: 600; }
+        .client-card p { font-family: 'Inter', sans-serif; font-size: 1em; line-height: 1.6; color: #2d3748; }
+        .discovery-box { background: #e6f0ff; border-radius: 16px; padding: 25px; margin-top: 30px; text-align: center; border-left: 6px solid #2c5282; border-bottom: 3px solid #C69C6D; }
+        .discovery-box p { font-size: 1.1em; margin-bottom: 15px; }
+        .discovery-link { display: inline-block; background: #2c5282; color: white; padding: 10px 28px; border-radius: 40px; text-decoration: none; font-weight: 600; transition: all 0.3s; font-family: 'Inter', sans-serif; }
+        .discovery-link:hover { background: #C69C6D; transform: scale(1.02); }
+        .scroll-container { position: relative; min-height: 500px; background: #f8f0e0; border-radius: 20px; padding: 30px; box-shadow: 0 15px 30px rgba(0,0,0,0.2); background-image: linear-gradient(45deg, #f8f0e0 95%, #e8d8c0 100%); border: 2px solid #c0a878; border-bottom: 4px solid #C69C6D; overflow: hidden; font-family: 'Inter', sans-serif; }
+        .scroll-container::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 30px; background: linear-gradient(to bottom, #d4b88c, #f8f0e0); border-bottom: 2px solid #c0a878; }
+        .scroll-container::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 30px; background: linear-gradient(to top, #d4b88c, #f8f0e0); border-top: 2px solid #c0a878; }
+        .scroll-content { padding: 30px 20px; font-family: 'Inter', sans-serif; }
+        .scroll-title { font-family: 'Inter', sans-serif; font-size: 3.5em; text-align: center; color: #2c5282; margin-bottom: 30px; text-shadow: 2px 2px 3px rgba(0,0,0,0.1); border-bottom: 3px dashed #c0a878; padding-bottom: 20px; font-weight: 700; }
+        .journey-item { font-size: 1.2em; margin-bottom: 25px; padding: 15px 25px; background: rgba(255, 255, 255, 0.7); border-radius: 50px; box-shadow: 0 5px 10px rgba(0,0,0,0.05); border: 1px solid #d4b88c; border-left: 4px solid #2c5282; opacity: 0; animation: fadeInRow 0.5s ease forwards; display: flex; align-items: center; gap: 20px; transition: transform 0.3s ease, border-color 0.3s ease; font-family: 'Inter', sans-serif; }
+        .journey-item:hover { transform: translateX(10px); border-left-color: #C69C6D; background: rgba(255, 255, 255, 0.9); }
         .journey-item:nth-child(1) { animation-delay: 0.2s; }
         .journey-item:nth-child(2) { animation-delay: 0.4s; }
         .journey-item:nth-child(3) { animation-delay: 0.6s; }
@@ -481,524 +89,206 @@
         .journey-item:nth-child(7) { animation-delay: 1.4s; }
         .journey-item:nth-child(8) { animation-delay: 1.6s; }
         .journey-item:nth-child(9) { animation-delay: 1.8s; }
-        
-        @keyframes fadeInRow {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        .journey-date {
-            font-weight: 700;
-            color: #2c5282;
-            min-width: 200px;
-            font-size: 1em;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .journey-details {
-            flex: 1;
-        }
-        
-        .journey-title {
-            font-weight: 600;
-            color: #0a3147;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .journey-company {
-            color: #4a5568;
-            font-size: 0.9em;
-            margin-left: 10px;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .journey-education {
-            margin-top: 40px;
-            padding: 20px;
-            background: rgba(44, 82, 130, 0.1);
-            border-radius: 50px;
-            text-align: center;
-            font-size: 1.3em;
-            border: 2px dashed #2c5282;
-            border-bottom: 4px solid #C69C6D;
-            opacity: 0;
-            animation: fadeInRow 0.5s ease 2.0s forwards;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        /* ===== BLOG STYLES ===== */
-        .blog-titles {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin: 20px 0;
-        }
-        
-        .blog-title-item {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.6em;
-            color: #2c5282;
-            padding: 15px 25px;
-            background: #f8fafc;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            border-left: 6px solid #2c5282;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
-        }
-        
-        .blog-title-item:hover {
-            transform: translateX(10px);
-            border-color: #C69C6D;
-            border-left-color: #C69C6D;
-            background: #fff5e6;
-            color: #C69C6D;
-        }
-        
-        .blog-article-content {
-            display: none;
-            margin-top: 30px;
-            padding: 30px;
-            background: #f8fafc;
-            border-radius: 20px;
-            border-left: 6px solid #2c5282;
-            border-bottom: 4px solid #C69C6D;
-            animation: fadeIn 0.5s ease;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .blog-article-content.active {
-            display: block;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        .blog-article-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 2.2em;
-            color: #0a3147;
-            margin-bottom: 25px;
-            border-bottom: 3px solid #2c5282;
-            padding-bottom: 10px;
-            font-weight: 700;
-        }
-        
-        .blog-text {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: #2d3748;
-        }
-        
-        .blog-text h4 {
-            font-size: 1.6em;
-            color: #2c5282;
-            margin: 25px 0 15px;
-            border-left: 4px solid #C69C6D;
-            padding-left: 15px;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-        }
-        
-        .blog-text h5 {
-            font-size: 1.3em;
-            color: #2c5282;
-            margin: 20px 0 10px;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-        }
-        
-        .blog-text ul {
-            margin: 15px 0;
-            padding-left: 30px;
-        }
-        
-        .blog-text li {
-            margin-bottom: 8px;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .blog-text strong {
-            color: #C69C6D;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .references {
-            margin-top: 30px;
-            padding: 20px;
-            background: #e6f0ff;
-            border-radius: 15px;
-            border-left: 6px solid #2c5282;
-            border-bottom: 3px solid #C69C6D;
-        }
-        
-        .references p {
-            font-family: 'Inter', sans-serif;
-            font-size: 1em;
-            margin-bottom: 5px;
-        }
-        
-        .anchor-box {
-            background: #e6f0ff;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 15px 0;
-            border-left: 4px solid #2c5282;
-            border-bottom: 2px solid #C69C6D;
-            font-style: italic;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        /* ===== CONTACT STYLES ===== */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 30px 0;
-        }
-        
-        .contact-card {
-            background: #f8fafc;
-            border-radius: 20px;
-            padding: 35px 25px;
-            text-align: center;
-            border: 1px solid #e2e8f0;
-            border-bottom: 4px solid #2c5282;
-            transition: transform 0.3s, border-color 0.3s;
-        }
-        
-        .contact-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            border-bottom-color: #C69C6D;
-        }
-        
-        .contact-card h4 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.8em;
-            color: #2c5282;
-            margin-bottom: 15px;
-            transition: color 0.3s;
-            font-weight: 600;
-        }
-        
-        .contact-card:hover h4 {
-            color: #C69C6D;
-        }
-        
-        .contact-value {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.4em;
-            color: #0a3147;
-            word-break: break-all;
-        }
-        
-        .contact-value a {
-            color: #2c5282;
-            text-decoration: none;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.2s;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .contact-value a:hover {
-            border-bottom-color: #C69C6D;
-        }
-        
-        .linkedin-btn {
-            display: inline-block;
-            background: #0077b5;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 40px;
-            text-decoration: none;
-            margin-top: 20px;
-            font-weight: 600;
-            font-family: 'Inter', sans-serif;
-            font-size: 1.2em;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-            border-bottom: 4px solid #005582;
-        }
-        
-        .linkedin-btn:hover {
-            background: #C69C6D;
-            border-bottom-color: #8B6B4A;
-            transform: scale(1.05);
-        }
-        
-        /* ===== SERVICES GRID ===== */
-        .services-grid {
+        @keyframes fadeInRow { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+        .journey-date { font-weight: 700; color: #2c5282; min-width: 200px; font-size: 1em; font-family: 'Inter', sans-serif; }
+        .journey-details { flex: 1; }
+        .journey-title { font-weight: 600; color: #0a3147; font-family: 'Inter', sans-serif; }
+        .journey-company { color: #4a5568; font-size: 0.9em; margin-left: 10px; font-family: 'Inter', sans-serif; }
+        .journey-education { margin-top: 40px; padding: 20px; background: rgba(44, 82, 130, 0.1); border-radius: 50px; text-align: center; font-size: 1.3em; border: 2px dashed #2c5282; border-bottom: 4px solid #C69C6D; opacity: 0; animation: fadeInRow 0.5s ease 2.0s forwards; font-family: 'Inter', sans-serif; }
+
+        /* ===== BLOG CARDS - NEW DESIGN ===== */
+        .blog-cards-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-top: 25px;
+            gap: 28px;
+            margin: 10px 0 30px;
         }
-        
-        .service-item {
+
+        .blog-card {
             background: #f8fafc;
-            border-radius: 18px;
-            padding: 30px;
-            border: 1px solid #e2e8f0;
-            border-left: 6px solid #2c5282;
-            border-bottom: 4px solid #C69C6D;
-            transition: all 0.3s;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        
-        .service-item:hover {
-            box-shadow: 0 15px 30px rgba(198, 156, 109, 0.2);
-            transform: translateY(-5px);
-            border-left-color: #C69C6D;
-        }
-        
-        .service-item h4 {
-            font-family: 'Inter', sans-serif;
-            color: #0a3147;
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-size: 1.5em;
-            border-bottom: 3px solid #cbd5e0;
-            padding-bottom: 12px;
-            transition: border-color 0.3s;
-            font-weight: 600;
-        }
-        
-        .service-item:hover h4 {
-            border-bottom-color: #C69C6D;
-        }
-        
-        .service-item p, .service-item li {
-            font-family: 'Inter', sans-serif;
-            font-size: 1em;
-            line-height: 1.6;
-        }
-        
-        .service-item p {
-            margin-bottom: 15px;
-        }
-        
-        .service-item strong {
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            color: #2c5282;
-        }
-        
-        .benefits-box {
-            background: #e6f0ff;
-            border-radius: 12px;
-            padding: 20px;
-            margin-top: auto;
+            border-radius: 20px;
+            padding: 28px;
             border-left: 6px solid #2c5282;
             border-bottom: 3px solid #C69C6D;
-            min-height: 140px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(44, 82, 130, 0.15);
+            border-left-color: #C69C6D;
+        }
+
+        .blog-card-meta {
             display: flex;
             align-items: center;
+            gap: 12px;
         }
-        
-        .benefits-box p {
+
+        .blog-card-date {
             font-family: 'Inter', sans-serif;
-            font-size: 1em;
-            margin: 0;
-            line-height: 1.5;
+            font-size: 0.85em;
+            font-weight: 600;
+            color: #C69C6D;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
-        
-        /* ===== FOOTER ===== */
-        .footer {
-            text-align: center;
-            padding: 30px 20px;
+
+        .blog-card-tag {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75em;
+            background: rgba(44, 82, 130, 0.1);
+            color: #2c5282;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .blog-card-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.25em;
+            font-weight: 700;
+            color: #0a3147;
+            line-height: 1.3;
+            transition: color 0.3s;
+        }
+
+        .blog-card:hover .blog-card-title {
+            color: #2c5282;
+        }
+
+        .blog-card-preview {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95em;
             color: #4a5568;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.4em;
-            width: 100%;
-            border-top: 4px solid #C69C6D;
-            position: relative;
-            z-index: 1;
+            line-height: 1.7;
+            flex: 1;
         }
-        
-        ul {
-            padding-left: 25px;
-            margin: 15px 0;
+
+        .blog-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 8px;
+            padding-top: 14px;
+            border-top: 1px solid #e2e8f0;
+            flex-wrap: wrap;
+            gap: 10px;
         }
-        
-        li {
-            margin-bottom: 8px;
-        }
-        
-        hr {
+
+        .read-full-btn {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88em;
+            font-weight: 600;
+            color: #2c5282;
+            background: none;
             border: none;
-            border-top: 3px solid #e2e8f0;
-            margin: 40px 0;
+            cursor: pointer;
+            padding: 0;
+            transition: color 0.2s;
+            text-decoration: underline;
+            text-underline-offset: 3px;
         }
-        
-        /* Mobile Responsive */
-        @media (max-width: 1100px) {
-            .section-card {
-                flex: 0 0 calc(20% - 20px);
-                min-width: 170px;
-                height: 270px;
-            }
-            
-            .section-card h3 {
-                font-size: 1.3em;
-            }
+
+        .read-full-btn:hover {
+            color: #C69C6D;
         }
-        
+
+        .linkedin-article-btn {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85em;
+            font-weight: 600;
+            color: white;
+            background: #0077b5;
+            padding: 7px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .linkedin-article-btn:hover {
+            background: #C69C6D;
+            transform: scale(1.03);
+        }
+
+        .blog-divider {
+            border: none;
+            border-top: 2px solid #e2e8f0;
+            margin: 30px 0;
+        }
+
+        /* Article full content - kept inside expanded blog section */
+        .blog-article-content { display: none; margin-top: 30px; padding: 30px; background: #f8fafc; border-radius: 20px; border-left: 6px solid #2c5282; border-bottom: 4px solid #C69C6D; animation: fadeIn 0.5s ease; font-family: 'Inter', sans-serif; }
+        .blog-article-content.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .blog-article-title { font-family: 'Inter', sans-serif; font-size: 2.2em; color: #0a3147; margin-bottom: 10px; border-bottom: 3px solid #2c5282; padding-bottom: 10px; font-weight: 700; }
+        .blog-article-date { font-family: 'Inter', sans-serif; font-size: 0.9em; color: #C69C6D; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 25px; display: block; }
+        .blog-text { font-family: 'Inter', sans-serif; font-size: 1.1em; line-height: 1.8; color: #2d3748; }
+        .blog-text h4 { font-size: 1.6em; color: #2c5282; margin: 25px 0 15px; border-left: 4px solid #C69C6D; padding-left: 15px; font-family: 'Inter', sans-serif; font-weight: 600; }
+        .blog-text h5 { font-size: 1.3em; color: #2c5282; margin: 20px 0 10px; font-family: 'Inter', sans-serif; font-weight: 600; }
+        .blog-text ul { margin: 15px 0; padding-left: 30px; }
+        .blog-text li { margin-bottom: 8px; font-family: 'Inter', sans-serif; }
+        .blog-text strong { color: #C69C6D; font-family: 'Inter', sans-serif; }
+        .blog-back-btn { display: inline-block; margin-bottom: 20px; font-family: 'Inter', sans-serif; font-size: 0.95em; color: #2c5282; cursor: pointer; font-weight: 600; background: none; border: none; padding: 0; text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; }
+        .blog-back-btn:hover { color: #C69C6D; }
+        .references { margin-top: 30px; padding: 20px; background: #e6f0ff; border-radius: 15px; border-left: 6px solid #2c5282; border-bottom: 3px solid #C69C6D; }
+        .references p { font-family: 'Inter', sans-serif; font-size: 1em; margin-bottom: 5px; }
+        .anchor-box { background: #e6f0ff; padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #2c5282; border-bottom: 2px solid #C69C6D; font-style: italic; font-family: 'Inter', sans-serif; }
+
+        /* Services, contact, footer styles preserved exactly */
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 30px 0; }
+        .contact-card { background: #f8fafc; border-radius: 20px; padding: 35px 25px; text-align: center; border: 1px solid #e2e8f0; border-bottom: 4px solid #2c5282; transition: transform 0.3s, border-color 0.3s; }
+        .contact-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-bottom-color: #C69C6D; }
+        .contact-card h4 { font-family: 'Inter', sans-serif; font-size: 1.8em; color: #2c5282; margin-bottom: 15px; transition: color 0.3s; font-weight: 600; }
+        .contact-card:hover h4 { color: #C69C6D; }
+        .contact-value { font-family: 'Inter', sans-serif; font-size: 1.4em; color: #0a3147; word-break: break-all; }
+        .contact-value a { color: #2c5282; text-decoration: none; border-bottom: 2px solid transparent; transition: border-color 0.2s; font-family: 'Inter', sans-serif; }
+        .contact-value a:hover { border-bottom-color: #C69C6D; }
+        .linkedin-btn { display: inline-block; background: #0077b5; color: white; padding: 12px 30px; border-radius: 40px; text-decoration: none; margin-top: 20px; font-weight: 600; font-family: 'Inter', sans-serif; font-size: 1.2em; transition: all 0.3s; border: 2px solid transparent; border-bottom: 4px solid #005582; }
+        .linkedin-btn:hover { background: #C69C6D; border-bottom-color: #8B6B4A; transform: scale(1.05); }
+        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 25px; }
+        .service-item { background: #f8fafc; border-radius: 18px; padding: 30px; border: 1px solid #e2e8f0; border-left: 6px solid #2c5282; border-bottom: 4px solid #C69C6D; transition: all 0.3s; display: flex; flex-direction: column; height: 100%; }
+        .service-item:hover { box-shadow: 0 15px 30px rgba(198, 156, 109, 0.2); transform: translateY(-5px); border-left-color: #C69C6D; }
+        .service-item h4 { font-family: 'Inter', sans-serif; color: #0a3147; margin-top: 0; margin-bottom: 20px; font-size: 1.5em; border-bottom: 3px solid #cbd5e0; padding-bottom: 12px; transition: border-color 0.3s; font-weight: 600; }
+        .service-item:hover h4 { border-bottom-color: #C69C6D; }
+        .service-item p, .service-item li { font-family: 'Inter', sans-serif; font-size: 1em; line-height: 1.6; }
+        .service-item p { margin-bottom: 15px; }
+        .service-item strong { font-family: 'Inter', sans-serif; font-weight: 600; color: #2c5282; }
+        .benefits-box { background: #e6f0ff; border-radius: 12px; padding: 20px; margin-top: auto; border-left: 6px solid #2c5282; border-bottom: 3px solid #C69C6D; min-height: 140px; display: flex; align-items: center; }
+        .benefits-box p { font-family: 'Inter', sans-serif; font-size: 1em; margin: 0; line-height: 1.5; }
+        .footer { text-align: center; padding: 30px 20px; color: #4a5568; font-family: 'Montserrat', sans-serif; font-size: 1.4em; width: 100%; border-top: 4px solid #C69C6D; position: relative; z-index: 1; }
+        ul { padding-left: 25px; margin: 15px 0; }
+        li { margin-bottom: 8px; }
+        hr { border: none; border-top: 3px solid #e2e8f0; margin: 40px 0; }
+
         @media (max-width: 900px) {
-            .section-card {
-                flex: 0 0 calc(25% - 20px);
-                min-width: 160px;
-                height: 260px;
-            }
-            
-            .section-card h3 {
-                font-size: 1.2em;
-            }
-            
-            .profile-photo {
-                width: 75px;
-                height: 75px;
-            }
-            
-            .card-image {
-                width: 65px;
-                height: 65px;
-            }
+            .blog-cards-grid { grid-template-columns: 1fr; }
+            .client-profiles { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
         }
-        
-        @media (max-width: 700px) {
-            .section-card {
-                flex: 0 0 calc(33.33% - 20px);
-                min-width: 150px;
-                height: 250px;
-            }
-            
-            .section-card h3 {
-                font-size: 1.1em;
-            }
-        }
-        
-        @media (max-width: 550px) {
-            .section-card {
-                flex: 0 0 calc(50% - 15px);
-                min-width: 140px;
-                height: 240px;
-            }
-            
-            .section-card h3 {
-                font-size: 1em;
-            }
-            
-            .profile-photo {
-                width: 65px;
-                height: 65px;
-            }
-            
-            .card-image {
-                width: 55px;
-                height: 55px;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .client-profiles {
-                grid-template-columns: 1fr;
-            }
-        }
-        
         @media (max-width: 600px) {
-            .header {
-                padding: 20px;
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
-            }
-            
-            .logo {
-                height: 150px;
-                margin: 0 auto;
-            }
-            
-            .header-title h1 {
-                font-size: 2.5em;
-            }
-            
-            .header-title .main-subtitle {
-                font-size: 1.2em;
-            }
-            
-            .header-title .secondary-subtitle {
-                font-size: 0.9em;
-            }
-            
-            .book-call-btn {
-                font-size: 0.9em;
-                padding: 8px 24px;
-                margin-top: 5px;
-            }
-            
-            .expanded-content {
-                padding: 25px;
-            }
-            
-            .expanded-content h2 {
-                font-size: 2.5em;
-            }
-            
-            .expanded-content h3 {
-                font-size: 1.8em;
-            }
-            
-            .journey-item {
-                flex-direction: column;
-                text-align: center;
-                gap: 5px;
-                font-size: 1.1em;
-            }
-            
-            .journey-date {
-                min-width: auto;
-            }
-            
-            .service-item h4 {
-                font-size: 1.3em;
-            }
-            
-            .client-card h4 {
-                font-size: 1.4em;
-            }
-            
-            .blog-title-item {
-                font-size: 1.4em;
-            }
-            
-            .blog-article-title {
-                font-size: 1.8em;
-            }
-            
-            .blog-text {
-                font-size: 1em;
-            }
+            .header { padding: 20px; flex-direction: column; text-align: center; gap: 20px; }
+            .logo { height: 150px; margin: 0 auto; }
+            .header-title h1 { font-size: 2.5em; }
+            .header-title .main-subtitle { font-size: 1.2em; }
+            .header-title .secondary-subtitle { font-size: 0.9em; }
+            .book-call-btn { font-size: 0.9em; padding: 8px 24px; }
+            .expanded-content { padding: 25px; }
+            .expanded-content h2 { font-size: 2.5em; }
+            .section-card { flex: 0 0 calc(50% - 15px); min-width: 140px; height: 240px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER WITH LOGO AND TITLE ON SAME ROW -->
     <div class="header">
         <img src="/images/qcons.png" alt="Q CONS Logo" class="logo">
         <div class="header-title">
@@ -1009,181 +299,90 @@
         </div>
     </div>
 
-    <!-- MAIN CONTENT - CARDS CENTERED -->
     <div class="main-content">
         
-        <!-- Horizontal Cards - ALL CARDS VISIBLE WITHOUT SCROLLING -->
         <div class="section-grid">
-            <!-- About Me Card with Photo -->
             <div class="section-card" onclick="toggleSection('about')">
                 <img src="/images/Georgi Profile Image.png" alt="Georgi Gerov" class="profile-photo">
                 <h3>About Me</h3>
             </div>
-
-            <!-- My Professional Journey Card with Roll Image -->
             <div class="section-card" onclick="toggleSection('cv')">
                 <img src="/images/roll.png" alt="Scroll" class="card-image">
                 <h3>My Professional Journey</h3>
             </div>
-
-            <!-- Who I Work With Card -->
             <div class="section-card" onclick="toggleSection('clients')">
                 <img src="/images/contact.png" alt="Clients" class="card-image">
                 <h3>Who I Work With</h3>
             </div>
-
-            <!-- My Services Card with Quality Image -->
             <div class="section-card" onclick="toggleSection('services')">
                 <img src="/images/quality.png" alt="Quality" class="card-image">
                 <h3>My Services</h3>
             </div>
-
-            <!-- Blog Card -->
             <div class="section-card" onclick="toggleSection('blog')">
                 <img src="/images/blog.png" alt="Blog" class="card-image">
                 <h3>Blog</h3>
             </div>
-
-            <!-- Contact Me Card -->
             <div class="section-card" onclick="toggleSection('contact')">
                 <img src="/images/contact.png" alt="Contact" class="card-image">
                 <h3>Contact Me</h3>
             </div>
         </div>
 
-        <!-- ABOUT ME Expanded -->
+        <!-- ABOUT ME -->
         <div id="about" class="expanded-content">
             <button class="close-btn" onclick="toggleSection('about')">×</button>
             <h2>Why Work With Me</h2>
-            
             <div style="font-size: 1.1em; line-height: 1.8; color: #2d3748; background: #f8fafc; padding: 35px; border-radius: 18px; border-bottom: 3px solid #C69C6D;">
                 <p style="margin-bottom: 20px;">There are many quality consultants who know the regulations. Fewer understand how quality actually works inside a real organisation — the politics, the pressure, the gap between what the SOP says and what happens on the ground. That gap is where compliance breaks down. And closing it is what I do.</p>
-                
                 <p style="margin-bottom: 20px;">I bring over 20 years of hands-on quality leadership across some of the most demanding environments in global pharma, biotech, and contract research. From my early years as a Clinical Research Associate to Senior Director roles, I have built, led, and transformed quality functions across EMEA and beyond — always with one goal in mind: quality that works in practice, not just on paper.</p>
-                
                 <p style="margin-bottom: 20px;">I started my career as a practicing physician. That foundation shapes everything I do. When I talk about patient safety, data integrity, and clinical trial quality, it is not regulatory language to me — it is personal. Every SOP I write, every audit I conduct, and every team I train is ultimately in service of one thing: getting safe, effective therapies to the patients who need them.</p>
-                
-                <p style="margin-bottom: 20px;">What sets me apart is not just technical expertise — it is the ability to operate at every level of an organisation simultaneously. I speak the language of boards and health authorities, and I speak the language of the QA associate writing their first deviation report. I have sat in RA inspections rooms. I have coached SMEs through their first regulatory interview. I have rebuilt QMS frameworks from the ground up and guided organisations through critical findings — and I have seen what separates the companies that thrive under regulatory scrutiny from those that do not.</p>
-                
+                <p style="margin-bottom: 20px;">What sets me apart is not just technical expertise — it is the ability to operate at every level of an organisation simultaneously. I speak the language of boards and health authorities, and I speak the language of the QA associate writing their first deviation report. I have sat in FDA and EMA inspection rooms. I have coached SMEs through their first regulatory interview. I have rebuilt QMS frameworks from the ground up and guided organisations through critical findings — and I have seen what separates the companies that thrive under regulatory scrutiny from those that do not.</p>
                 <p style="margin-bottom: 20px;">I work with Pharma companies, Biotech startups, and CROs who are serious about quality — not as a compliance exercise, but as a strategic advantage. Whether you need to prepare for an imminent inspection, overhaul your QMS, build your team's capability, or navigate a complex regulatory challenge, I bring the experience, the judgment, and the commitment to deliver — not just a report, but a real, lasting outcome.</p>
-                
                 <p><strong>Based in Switzerland. Available globally. Fluent in the language of quality, compliance, and results.</strong></p>
             </div>
         </div>
 
-        <!-- MY PROFESSIONAL JOURNEY Expanded with Scroll Animation -->
+        <!-- PROFESSIONAL JOURNEY -->
         <div id="cv" class="expanded-content">
             <button class="close-btn" onclick="toggleSection('cv')">×</button>
-            
             <div class="scroll-container">
                 <div class="scroll-content">
                     <div class="scroll-title">My Professional Journey</div>
-                    
-                    <div class="journey-item">
-                        <span class="journey-date">Nov 2023 - Dec 2024</span>
-                        <span class="journey-details">
-                            <span class="journey-title">Senior Quality Assurance & Training Director</span>
-                            <span class="journey-company">Optimapharm</span>
-                        </span>
-                    </div>
-                    
-                    <div class="journey-item">
-                        <span class="journey-date">Mar 2021 - Nov 2023</span>
-                        <span class="journey-details">
-                            <span class="journey-title">Director Quality Assurance & Compliance</span>
-                            <span class="journey-company">Allucent</span>
-                        </span>
-                    </div>
-                    
-                    <div class="journey-item">
-                        <span class="journey-date">Mar 2013 - Dec 2020</span>
-                        <span class="journey-details">
-                            <span class="journey-title">Associate Director Quality Control, EMEA</span>
-                            <span class="journey-company">Covance</span>
-                        </span>
-                    </div>
-                    
-                    <div class="journey-item">
-                        <span class="journey-date">Jan 2011 - Mar 2013</span>
-                        <span class="journey-details">
-                            <span class="journey-title">Senior Manager Quality Control, EMEA</span>
-                            <span class="journey-company">Covance</span>
-                        </span>
-                    </div>
-                    
-                    <div class="journey-item">
-                        <span class="journey-date">Sep 2008 - Jan 2011</span>
-                        <span class="journey-details">
-                            <span class="journey-title">Manager Clinical Operations Bulgaria</span>
-                            <span class="journey-company">Covance</span>
-                        </span>
-                    </div>
-                    
-                    <div class="journey-item">
-                        <span class="journey-date">Apr 2006 - Sep 2008</span>
-                        <span class="journey-details">
-                            <span class="journey-title">Senior CRA Bulgaria</span>
-                            <span class="journey-company">Covance</span>
-                        </span>
-                    </div>
-                    
-                    <div class="journey-item">
-                        <span class="journey-date">Apr 2006 - Sep 2008</span>
-                        <span class="journey-details">
-                            <span class="journey-title">CRA Bulgaria</span>
-                            <span class="journey-company">Covance</span>
-                        </span>
-                    </div>
-                    
-                    <div class="journey-item">
-                        <span class="journey-date">Jul 2003 - Apr 2006</span>
-                        <span class="journey-details">
-                            <span class="journey-title">CRA Bulgaria</span>
-                            <span class="journey-company">PSI Pharma Support</span>
-                        </span>
-                    </div>
-                    
-                    <div class="journey-item">
-                        <span class="journey-date">Feb 1998 - Jul 2003</span>
-                        <span class="journey-details">
-                            <span class="journey-title">Practicing Physician</span>
-                        </span>
-                    </div>
-                    
-                    <div class="journey-education">
-                        <strong>Education:</strong> Medical University Plovdiv, Bulgaria (1991-1997)
-                    </div>
+                    <div class="journey-item"><span class="journey-date">Nov 2023 - Dec 2024</span><span class="journey-details"><span class="journey-title">Senior Quality Assurance & Training Director</span><span class="journey-company">Optimapharm</span></span></div>
+                    <div class="journey-item"><span class="journey-date">Mar 2021 - Nov 2023</span><span class="journey-details"><span class="journey-title">Director Quality Assurance & Compliance</span><span class="journey-company">Allucent</span></span></div>
+                    <div class="journey-item"><span class="journey-date">Mar 2013 - Dec 2020</span><span class="journey-details"><span class="journey-title">Associate Director Quality Control, EMEA</span><span class="journey-company">Covance</span></span></div>
+                    <div class="journey-item"><span class="journey-date">Jan 2011 - Mar 2013</span><span class="journey-details"><span class="journey-title">Senior Manager Quality Control, EMEA</span><span class="journey-company">Covance</span></span></div>
+                    <div class="journey-item"><span class="journey-date">Sep 2008 - Jan 2011</span><span class="journey-details"><span class="journey-title">Manager Clinical Operations Bulgaria</span><span class="journey-company">Covance</span></span></div>
+                    <div class="journey-item"><span class="journey-date">Apr 2006 - Sep 2008</span><span class="journey-details"><span class="journey-title">Senior CRA Bulgaria</span><span class="journey-company">Covance</span></span></div>
+                    <div class="journey-item"><span class="journey-date">Jul 2003 - Apr 2006</span><span class="journey-details"><span class="journey-title">CRA Bulgaria</span><span class="journey-company">PSI Pharma Support</span></span></div>
+                    <div class="journey-item"><span class="journey-date">Feb 1998 - Jul 2003</span><span class="journey-details"><span class="journey-title">Practicing Physician</span></span></div>
+                    <div class="journey-education"><strong>Education:</strong> Medical University Plovdiv, Bulgaria (1991-1997)</div>
                 </div>
             </div>
         </div>
 
-        <!-- WHO I WORK WITH Expanded -->
+        <!-- WHO I WORK WITH -->
         <div id="clients" class="expanded-content">
             <button class="close-btn" onclick="toggleSection('clients')">×</button>
             <h2>Who I Work With</h2>
-            
             <div class="client-profiles">
                 <div class="client-card">
                     <h4>🔬 Emerging Biotech & Pharma Companies</h4>
                     <p>You are building your pipeline and your organisation simultaneously. You need senior quality leadership and a robust QMS — but you are not yet ready for a full-time Quality Director. I bring board-level quality expertise on a flexible, project basis, helping you build the right foundation from day one — without the overhead of a permanent hire. From your first IND to your first regulatory inspection, I make sure quality is never the reason your programme stalls.</p>
                 </div>
-                
                 <div class="client-card">
                     <h4>🏢 Small & Mid-Size CROs</h4>
                     <p>You are running complex clinical trials for demanding sponsors — and your quality function needs to keep pace. SOPs are inconsistent, audit programmes are reactive, sponsor oversight requirements are increasing, and the next regulatory inspection keeps you awake at night. I bring the structure, the systems, and the hands-on CRO experience to build a quality function that satisfies sponsors, passes inspections, and scales with your business — without disrupting your operations or your timelines.</p>
                 </div>
-                
                 <div class="client-card">
                     <h4>🌍 Global Pharma & Biotech Organisations</h4>
                     <p>You have an established quality function but face specific, complex challenges — a critical regulatory finding, a digital transformation programme, an upcoming FDA or EMA inspection, or a CRO oversight gap that needs urgent attention. I work alongside your internal team as a senior expert partner, bringing an outside perspective and decades of hands-on global experience to solve the problem and build lasting internal capability.</p>
                 </div>
-                
                 <div class="client-card">
                     <h4>🚀 Sponsors Preparing for First-in-Human or Pivotal Trials</h4>
                     <p>Your science is ready. Your quality infrastructure needs to be too. I help first-time sponsors build inspection-ready GCP oversight frameworks, establish vendor governance, and prepare their teams for the scrutiny that comes with regulatory submissions and health authority interactions. You get one chance to make the right impression with regulators — I make sure you are ready.</p>
                 </div>
             </div>
-            
             <div class="discovery-box">
                 <p><strong>💡 Not Sure if We Are a Fit?</strong></p>
                 <p>Book a free 30-minute discovery call. No obligation — just an honest conversation about your quality challenges and whether I can help.</p>
@@ -1191,137 +390,182 @@
             </div>
         </div>
 
-        <!-- MY SERVICES Expanded -->
+        <!-- SERVICES -->
         <div id="services" class="expanded-content">
             <button class="close-btn" onclick="toggleSection('services')">×</button>
             <h2>My Services</h2>
-            
             <div class="services-grid">
-                <!-- Service 1 -->
                 <div class="service-item">
                     <h4>1. Quality Management System (QMS) Development & Optimization</h4>
                     <p>Your QMS should be the backbone of your business — not a source of audit risk, regional inconsistency, or operational friction. If your quality system has grown into a patchwork of disconnected SOPs, unclear ownership, and compliance gaps, you are not alone. Most organisations reach a point where their QMS no longer reflects how they actually operate.</p>
                     <p>I design, implement, and globally harmonize QMS frameworks that are fully aligned with ICH GCP, ISO 9001, and regional regulatory requirements. From documentation control and CAPA to change management and deviation handling, I build systems that are rigorous enough to satisfy any regulator — and practical enough for your teams to use every day.</p>
-                    <div class="benefits-box">
-                        <p><strong>What this means for you:</strong> A harmonized, scalable, inspection-ready QMS that reduces compliance risk, eliminates regional inconsistency, and gives your organisation the agility to grow without quality becoming a bottleneck.</p>
-                    </div>
+                    <div class="benefits-box"><p><strong>What this means for you:</strong> A harmonized, scalable, inspection-ready QMS that reduces compliance risk, eliminates regional inconsistency, and gives your organisation the agility to grow without quality becoming a bottleneck.</p></div>
                 </div>
-                
-                <!-- Service 2 -->
                 <div class="service-item">
                     <h4>2. Inspection Readiness & Regulatory Compliance</h4>
                     <p>No organisation should face an FDA, EMA, MHRA, or PMDA inspection unprepared. Yet too many companies treat inspection readiness as a last-minute scramble — assembling documents, coaching staff, and hoping for the best. Regulators notice. And the consequences of a critical finding go far beyond the inspection itself.</p>
                     <p>I build comprehensive, sustainable inspection readiness programmes designed to make every day an inspection-ready day. This includes pre-inspection gap assessments, mock audits, SME coaching for interviews and evidence presentation, inspection playbook development, and full post-inspection CAPA follow-up. I prepare your documents and your people — because regulators assess both.</p>
-                    <div class="benefits-box">
-                        <p><strong>What this means for you:</strong> An organisation that walks into any regulatory inspection with confidence — and walks out with its reputation, its data, and its timeline intact.</p>
-                    </div>
+                    <div class="benefits-box"><p><strong>What this means for you:</strong> An organisation that walks into any regulatory inspection with confidence — and walks out with its reputation, its data, and its timeline intact.</p></div>
                 </div>
-                
-                <!-- Service 3 -->
                 <div class="service-item">
                     <h4>3. Clinical Quality Assurance & GCP Oversight</h4>
                     <p>Maintaining consistent, demonstrable GCP compliance across sponsors, CROs, and investigator sites — especially across multiple regions and time zones — is one of the most complex challenges in clinical development. A single oversight gap can put your trial data, your submission timeline, and your patients at risk.</p>
                     <p>I build robust GCP oversight frameworks tailored to your organisation's structure and risk profile. I conduct system, process, vendor, investigator site, and study-specific audits, and provide quality governance across Clinical Operations, Medical Affairs, and Pharmacovigilance — ensuring that quality is not just documented but genuinely embedded in how your trials run.</p>
-                    <div class="benefits-box">
-                        <p><strong>What this means for you:</strong> Full GCP compliance and data integrity across the clinical trial lifecycle, with the audit trail and governance documentation to satisfy any regulatory authority — anywhere in the world.</p>
-                    </div>
+                    <div class="benefits-box"><p><strong>What this means for you:</strong> Full GCP compliance and data integrity across the clinical trial lifecycle, with the audit trail and governance documentation to satisfy any regulatory authority — anywhere in the world.</p></div>
                 </div>
-                
-                <!-- Service 4 -->
                 <div class="service-item">
                     <h4>4. External Service Providers & CRO Quality Oversight</h4>
                     <p>Outsourcing to CROs and external service providers is standard practice. But outsourcing an activity does not outsource the accountability. When your ESP fails a GxP requirement, the regulatory consequences land with you — the sponsor. Many organisations discover this only when it is too late.</p>
                     <p>I design and implement end-to-end ESP and CRO quality oversight programmes — from initial qualification and audit through to ongoing performance monitoring and governance. I develop Quality Agreements with real teeth, build transparent accountability mechanisms, and oversee technology service providers including validated IT systems and data integrity controls.</p>
-                    <div class="benefits-box">
-                        <p><strong>What this means for you:</strong> Complete confidence that your external partners are meeting your quality standards — and clear, documented evidence that you have been overseeing them every step of the way.</p>
-                    </div>
+                    <div class="benefits-box"><p><strong>What this means for you:</strong> Complete confidence that your external partners are meeting your quality standards — and clear, documented evidence that you have been overseeing them every step of the way.</p></div>
                 </div>
-                
-                <!-- Service 5 -->
                 <div class="service-item">
                     <h4>5. Quality Training, Capability Building & Organisational Development</h4>
                     <p>Compliance training that simply walks staff through SOPs creates teams that know the rules — but not why the rules exist. When an inspector asks a difficult question or a deviation occurs under pressure, that distinction matters enormously. Real inspection resilience comes from genuine understanding, not checkbox completion.</p>
                     <p>I design and deliver bespoke GxP and QA training programmes that build true competency — covering regulatory expectations, audit skills, inspection readiness, data integrity, and risk-based thinking. I develop competency frameworks and continuous learning structures tailored to your organisation's size, maturity, and regulatory footprint.</p>
-                    <div class="benefits-box">
-                        <p><strong>What this means for you:</strong> A workforce that owns quality — not just follows it. Teams that perform under inspection pressure, escalate the right issues, and actively contribute to a culture of continuous improvement.</p>
-                    </div>
+                    <div class="benefits-box"><p><strong>What this means for you:</strong> A workforce that owns quality — not just follows it. Teams that perform under inspection pressure, escalate the right issues, and actively contribute to a culture of continuous improvement.</p></div>
                 </div>
-                
-                <!-- Service 6 -->
                 <div class="service-item">
                     <h4>6. Quality Risk Management & Continuous Improvement</h4>
                     <p>Most quality failures do not come without warning. The signals were there — in deviations, near-misses, audit trends, and KPI drift — but were not acted on in time. Reactive quality management is expensive, disruptive, and increasingly unacceptable to modern regulators who expect evidence of proactive risk control.</p>
                     <p>I implement ICH Q9(R1)-based risk management frameworks that identify, prioritise, and mitigate quality risks before they become findings. I establish Key Quality Indicators and real-time dashboards, coordinate Serious Breach Management, and facilitate rigorous root cause analysis and CAPA effectiveness reviews — building a continuous improvement engine into the heart of your quality function.</p>
-                    <div class="benefits-box">
-                        <p><strong>What this means for you:</strong> A shift from reactive firefighting to proactive quality control — with the data, metrics, and documented evidence to demonstrate risk-based oversight to any regulatory authority.</p>
-                    </div>
+                    <div class="benefits-box"><p><strong>What this means for you:</strong> A shift from reactive firefighting to proactive quality control — with the data, metrics, and documented evidence to demonstrate risk-based oversight to any regulatory authority.</p></div>
                 </div>
-                
-                <!-- Service 7 -->
                 <div class="service-item">
                     <h4>7. Digital Quality Transformation</h4>
                     <p>If your quality function still runs on spreadsheets, shared drives, or disconnected legacy systems, you are not just inefficient — you are exposed. Manual processes create data integrity risks, audit trail gaps, and the kind of findings that generate FDA warning letters and EMA inspection observations.</p>
                     <p>I lead the implementation and optimisation of eQMS, DMS, and LMS platforms — transforming paper-based and fragmented quality workflows into integrated, validated digital systems. I digitalise CAPA, audit management, and document control, and integrate data analytics for real-time quality performance monitoring. I also build governance frameworks for AI and advanced analytics tools, ensuring their use in clinical and quality processes is validated, transparent, and regulator-ready.</p>
-                    <div class="benefits-box">
-                        <p><strong>What this means for you:</strong> A digitally mature quality function that operates with greater speed, accuracy, and data integrity — and positions your organisation at the forefront of modern regulatory expectations.</p>
-                    </div>
+                    <div class="benefits-box"><p><strong>What this means for you:</strong> A digitally mature quality function that operates with greater speed, accuracy, and data integrity — and positions your organisation at the forefront of modern regulatory expectations.</p></div>
                 </div>
-                
-                <!-- Service 8 -->
                 <div class="service-item">
                     <h4>8. Audit & Inspection Management</h4>
                     <p>An audit programme that simply ticks boxes is not protecting your organisation — it is creating a false sense of security. Regulators expect risk-based audit planning, consistent execution, and evidence that findings are driving genuine systemic improvement. Anything less is a vulnerability waiting to be exposed.</p>
                     <p>I design and execute global audit programmes that cover the full spectrum — internal, external, and for-cause audits across all GxP areas. Every programme is built on a risk-based foundation, with full CAPA oversight, trend analysis, and leadership reporting built in. I bring the experience of hundreds of audits across pharma, biotech, and CROs — and the judgment to distinguish a documentation gap from a systemic quality failure.</p>
-                    <div class="benefits-box">
-                        <p><strong>What this means for you:</strong> Clear, unvarnished visibility of your true compliance maturity — and a systematic, evidence-based path to resolving gaps before a regulator finds them for you.</p>
-                    </div>
+                    <div class="benefits-box"><p><strong>What this means for you:</strong> Clear, unvarnished visibility of your true compliance maturity — and a systematic, evidence-based path to resolving gaps before a regulator finds them for you.</p></div>
                 </div>
             </div>
         </div>
 
-        <!-- BLOG Expanded -->
+        <!-- BLOG - REDESIGNED -->
         <div id="blog" class="expanded-content">
             <button class="close-btn" onclick="toggleSection('blog')">×</button>
             <h2>Blog</h2>
-            
-            <div class="blog-titles">
-                <div class="blog-title-item" onclick="showArticle('article1', event)">📄 5 Critical Steps for Inspection Readiness in Clinical Trials</div>
-                <div class="blog-title-item" onclick="showArticle('article2', event)">📄 Building A Quality Culture</div>
-                <div class="blog-title-item" onclick="showArticle('article3', event)">📄 Integrated Trial Process</div>
-                <div class="blog-title-item" onclick="showArticle('article4', event)">📄 End-To-End Quality Process</div>
+
+            <!-- Blog Cards Grid -->
+            <div id="blog-cards" class="blog-cards-grid">
+
+                <!-- Card 1 -->
+                <div class="blog-card" onclick="showArticle('article1')">
+                    <div class="blog-card-meta">
+                        <span class="blog-card-date">September 2025</span>
+                        <span class="blog-card-tag">Inspection Readiness</span>
+                    </div>
+                    <div class="blog-card-title">5 Critical Steps for Inspection Readiness in Clinical Trials</div>
+                    <div class="blog-card-preview">Regulators expect a continuous state of demonstrable control — not a last-minute scramble. Here are five immediately actionable steps every sponsor and CRO should implement now to build a culture of permanent inspection readiness.</div>
+                    <div class="blog-card-footer">
+                        <button class="read-full-btn" onclick="showArticle('article1'); event.stopPropagation();">Read full article ↓</button>
+                        <a class="linkedin-article-btn" href="https://www.linkedin.com/pulse/5-critical-steps-inspection-readiness-clinical-trials-georgi-gerov-gvrgf?trackingId=axwyIK9sRviilo0UV7bKtg%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recent_activity_content_view%3BNSOe207%2BT4mF%2BrIQvB%2BywA%3D%3D" target="_blank" onclick="event.stopPropagation();">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            Read on LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="blog-card" onclick="showArticle('article2')">
+                    <div class="blog-card-meta">
+                        <span class="blog-card-date">January 2026</span>
+                        <span class="blog-card-tag">Quality Culture</span>
+                    </div>
+                    <div class="blog-card-title">Building a Quality Culture: Bridging FDA's Case for Quality and EMA's Reflections on Quality Culture</div>
+                    <div class="blog-card-preview">Quality is no longer just compliance — it is a driver of trust, innovation, and sustainable business success. Discover six critical steps organisations can adopt to build a proactive, inspection-ready, and resilient quality culture aligned with FDA and EMA expectations.</div>
+                    <div class="blog-card-footer">
+                        <button class="read-full-btn" onclick="showArticle('article2'); event.stopPropagation();">Read full article ↓</button>
+                        <a class="linkedin-article-btn" href="https://www.linkedin.com/pulse/building-quality-culture-bridging-fdas-case-emas-georgi-gerov-5ho6e?trackingId=axwyIK9sRviilo0UV7bKtg%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recent_activity_content_view%3BNSOe207%2BT4mF%2BrIQvB%2BywA%3D%3D" target="_blank" onclick="event.stopPropagation();">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            Read on LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="blog-card" onclick="showArticle('article3')">
+                    <div class="blog-card-meta">
+                        <span class="blog-card-date">September 2025</span>
+                        <span class="blog-card-tag">Clinical Trials</span>
+                    </div>
+                    <div class="blog-card-title">Integration is the New Compliance: Streamlining Trials with ICH GCP E6 (R3)</div>
+                    <div class="blog-card-preview">The traditional sequential approach to clinical trials is no longer sustainable. A strategic shift towards an Integrated Trial Process — built on unified technology, risk-based quality management, and end-to-end data flow — is now both an operational and regulatory imperative.</div>
+                    <div class="blog-card-footer">
+                        <button class="read-full-btn" onclick="showArticle('article3'); event.stopPropagation();">Read full article ↓</button>
+                        <a class="linkedin-article-btn" href="https://www.linkedin.com/pulse/integration-new-compliance-streamlining-trials-ich-e6-georgi-gerov-kku2f?trackingId=axwyIK9sRviilo0UV7bKtg%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recent_activity_content_view%3BNSOe207%2BT4mF%2BrIQvB%2BywA%3D%3D" target="_blank" onclick="event.stopPropagation();">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            Read on LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="blog-card" onclick="showArticle('article4')">
+                    <div class="blog-card-meta">
+                        <span class="blog-card-date">September 2025</span>
+                        <span class="blog-card-tag">QMS</span>
+                    </div>
+                    <div class="blog-card-title">Beyond Compliance: How End-to-End Quality Drives Patient Safety and Regulatory Success</div>
+                    <div class="blog-card-preview">Quality is no longer a checkpoint — it is a continuum. Learn how leading organisations are embedding quality principles across the entire product lifecycle, from early R&D through to post-market surveillance, to meet FDA, EMA, MHRA, and WHO expectations.</div>
+                    <div class="blog-card-footer">
+                        <button class="read-full-btn" onclick="showArticle('article4'); event.stopPropagation();">Read full article ↓</button>
+                        <a class="linkedin-article-btn" href="https://www.linkedin.com/pulse/beyond-compliance-how-end-to-end-quality-drives-patient-georgi-gerov-91lpf?trackingId=axwyIK9sRviilo0UV7bKtg%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recent_activity_content_view%3BNSOe207%2BT4mF%2BrIQvB%2BywA%3D%3D" target="_blank" onclick="event.stopPropagation();">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            Read on LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="blog-card" onclick="showArticle('article5')">
+                    <div class="blog-card-meta">
+                        <span class="blog-card-date">February 2026</span>
+                        <span class="blog-card-tag">ESP Management</span>
+                    </div>
+                    <div class="blog-card-title">The Sponsor's Unwavering Duty: Mastering Quality Assurance in the Age of External Service Providers</div>
+                    <div class="blog-card-preview">Outsourcing a function is not outsourcing accountability. In an era of complex ESP ecosystems, a strategic, proactive QA framework aligned with ICH GCP E6 (R3) is no longer a compliance task — it is a critical leadership imperative for every sponsor.</div>
+                    <div class="blog-card-footer">
+                        <button class="read-full-btn" onclick="showArticle('article5'); event.stopPropagation();">Read full article ↓</button>
+                        <a class="linkedin-article-btn" href="https://lnkd.in/eX9iUMSB" target="_blank" onclick="event.stopPropagation();">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            Read on LinkedIn
+                        </a>
+                    </div>
+                </div>
             </div>
-            
-            <!-- Article 1 -->
+
+            <hr class="blog-divider">
+
+            <!-- Full Article Content Sections -->
             <div id="article1" class="blog-article-content">
+                <button class="blog-back-btn" onclick="hideArticle('article1')">← Back to all articles</button>
                 <div class="blog-article-title">5 Critical Steps for Inspection Readiness in Clinical Trials</div>
+                <span class="blog-article-date">Published: September 2025</span>
                 <div class="blog-text">
                     <p>Inspection readiness is no longer a "prepare-for-a-visit" exercise — regulators expect a continuous state of demonstrable control, data integrity, and rapid, evidence-based responses. Recent regulatory activity changes how Sponsors and CROs should prepare.</p>
-                    
                     <p>Below are five practical, prioritized steps you can implement immediately.</p>
-                    
                     <h4>1. Treat remote and hybrid inspections as normal operating mode — prepare systems and people</h4>
                     <p>Regulators now routinely use remote regulatory assessments and hybrid inspections. That means staff must be trained to present evidence remotely, systems must provide secure, rapid access to records, and workflows must support remote requests without creating data integrity risks. Start by mapping what documents and evidence would be requested remotely and test retrieval under timed conditions.</p>
-                    
                     <h4>2. Make data integrity airtight — systems, roles, and audit trails</h4>
                     <p>Inspectors continue to focus on electronic records and the audit trail: who changed what, when, and why. Ensure system access controls, segregation of duties, validated computer systems, and robust audit trails are in place. Data integrity issues are frequently the root cause of major inspection findings — treat them as a top risk to your trial program.</p>
-                    
                     <h4>3. Use technology — but document its credibility and governance (AI, analytics, automation)</h4>
                     <p>Regulators welcome innovation but expect risk-based justification, validation and governance for AI-driven tools, analytics, and automation used to support decisions or generate evidence. When AI/automated tools inform monitoring, querying, or data cleaning, create a clear credibility/validation package showing context of use, model performance, and human oversight arrangements. Proactive documenting of AI credibility and limits is going to be critical.</p>
-                    
                     <h4>4. Keep your TMF (and inspection evidence) continuously inspection-ready</h4>
                     <p>Inspectors expect TMFs to be current and indexable in almost real time — not assembled retrospectively. Recent trends emphasize real-time TMF completeness, higher expectations for remote access, and that Sponsor/CRO can demonstrate oversight of TMF quality metrics. Invest in TMF health KPIs and hold routine "TMF readiness" checkpoints tied to leadership reporting.</p>
-                    
                     <h4>5. Rehearse inspection scenarios and demonstrate cross-functional ownership</h4>
-                    <p>Inspection readiness is as much about people as documents. Run full-scope mock inspections (onsite, remote, and hybrid) involving all stakeholders and senior leadership. Focus scenarios on high-risk areas like protocol deviations, data integrity, SAE/AEs, and Sponsor oversight of outsourced activities. The goal is to show an integrated, evidence-backed, business-level response. EMA's coordinated inspection programs and MHRA/GCP updates emphasize cross-agency expectations that cut across functions.</p>
-                    
-                    <p><strong>Why this matters now</strong><br>
-                    Regulatory bodies have accelerated digital and remote assessment policies and are explicitly engaging on AI, eTMF quality, and coordinated inspections. Sponsors and CROs that adopt continuous readiness, tighten data integrity, and govern AI/analytics proactively will reduce inspection risk and demonstrate leadership in quality — turning compliance into a competitive advantage.</p>
-                    
+                    <p>Inspection readiness is as much about people as documents. Run full-scope mock inspections (onsite, remote, and hybrid) involving all stakeholders and senior leadership. Focus scenarios on high-risk areas like protocol deviations, data integrity, SAE/AEs, and Sponsor oversight of outsourced activities. The goal is to show an integrated, evidence-backed, business-level response.</p>
+                    <p><strong>Why this matters now:</strong> Regulatory bodies have accelerated digital and remote assessment policies and are explicitly engaging on AI, eTMF quality, and coordinated inspections. Sponsors and CROs that adopt continuous readiness, tighten data integrity, and govern AI/analytics proactively will reduce inspection risk and demonstrate leadership in quality — turning compliance into a competitive advantage.</p>
                     <div class="references">
                         <p><strong>References:</strong></p>
                         <p>1. Conducting Remote Regulatory Assessments Questions and Answers, June 2025, U.S. Food and Drug Administration</p>
                         <p>2. Data Integrity and Compliance with CGMP, U.S. Food and Drug Administration</p>
-                        <p>3. Considerations for the Use of Artificial Intelligence To Support Regulatory Decision-Making for Drug and Biological Products, January 2025, U.S. Food and Drug Administration</p>
+                        <p>3. Considerations for the Use of Artificial Intelligence To Support Regulatory Decision-Making for Drug and Biological Products, January 2025, FDA</p>
                         <p>4. Artificial Intelligence for Drug Development, February 2025, U.S. Food and Drug Administration</p>
                         <p>5. TMF Trends from 2024, December 2024, Just In Time GCP</p>
                         <p>6. Inspections and Compliance, EMA Annual report 2024</p>
@@ -1329,264 +573,177 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Article 2 -->
+
             <div id="article2" class="blog-article-content">
-                <div class="blog-article-title">Building A Quality Culture</div>
+                <button class="blog-back-btn" onclick="hideArticle('article2')">← Back to all articles</button>
+                <div class="blog-article-title">Building a Quality Culture: Bridging FDA's Case for Quality and EMA's Reflections on Quality Culture</div>
+                <span class="blog-article-date">Published: September 2025</span>
                 <div class="blog-text">
-                    <p>In today's highly regulated life sciences environment, quality is no longer just compliance—it is a driver of trust, innovation, and sustainable business success. Both the FDA's Case for Quality (CfQ) initiative and the EMA's reflections on Quality Culture converge on a central theme: quality must be embedded into the mindset, systems, and daily practices of every organization—not bolted on at the end.</p>
-                    
-                    <p>To operationalize this vision, companies must take deliberate steps to transform governance, processes, and culture. Below are six critical steps that organizations can adopt to build a proactive, inspection-ready, and resilient quality culture.</p>
-                    
+                    <p>In today's highly regulated life sciences environment, quality is no longer just compliance — it is a driver of trust, innovation, and sustainable business success. Both the FDA's Case for Quality (CfQ) initiative and the EMA's reflections on Quality Culture converge on a central theme: quality must be embedded into the mindset, systems, and daily practices of every organization — not bolted on at the end.</p>
                     <h4>1. Establish Strong Governance and Leadership Commitment</h4>
-                    <ul>
-                        <li>Set the "tone from the top" by making quality a standing agenda item in executive reviews.</li>
-                        <li>Build governance bodies that integrate quality, compliance, and business performance.</li>
-                        <li>Link leadership incentives to quality outcomes, not just financial metrics.</li>
-                    </ul>
-                    <div class="anchor-box">
-                        <strong>Anchor:</strong> FDA CfQ emphasizes leadership accountability, while EMA highlights visible commitment from senior management as the cornerstone of quality culture.
-                    </div>
-                    
+                    <ul><li>Set the "tone from the top" by making quality a standing agenda item in executive reviews.</li><li>Build governance bodies that integrate quality, compliance, and business performance.</li><li>Link leadership incentives to quality outcomes, not just financial metrics.</li></ul>
+                    <div class="anchor-box"><strong>Anchor:</strong> FDA CfQ emphasizes leadership accountability, while EMA highlights visible commitment from senior management as the cornerstone of quality culture.</div>
                     <h4>2. Define and Embed Quality Metrics Beyond Compliance</h4>
-                    <ul>
-                        <li>Introduce leading indicators alongside lagging metrics.</li>
-                        <li>Use dashboards and data transparency to monitor culture health and identify systemic risks.</li>
-                        <li>Apply predictive analytics to detect risks before they impact patients or compliance.</li>
-                    </ul>
-                    <div class="anchor-box">
-                        <strong>Anchor:</strong> FDA CfQ advocates shifting from compliance metrics to performance metrics, while EMA stresses the need for data-driven insights into culture maturity.
-                    </div>
-                    
+                    <ul><li>Introduce leading indicators alongside lagging metrics.</li><li>Use dashboards and data transparency to monitor culture health and identify systemic risks.</li><li>Apply predictive analytics to detect risks before they impact patients or compliance.</li></ul>
+                    <div class="anchor-box"><strong>Anchor:</strong> FDA CfQ advocates shifting from compliance metrics to performance metrics, while EMA stresses the need for data-driven insights into culture maturity.</div>
                     <h4>3. Foster an Open, Learning-Oriented Environment</h4>
-                    <ul>
-                        <li>Encourage a "speak-up culture" where employees report issues without fear of retribution.</li>
-                        <li>Treat deviations and near-misses as opportunities for learning, not blame.</li>
-                        <li>Implement formal mechanisms for capturing lessons learned and sharing best practices across functions.</li>
-                    </ul>
-                    <div class="anchor-box">
-                        <strong>Anchor:</strong> EMA notes psychological safety as key to sustaining quality, while FDA highlights "quality maturity" as the ability to learn and adapt.
-                    </div>
-                    
+                    <ul><li>Encourage a "speak-up culture" where employees report issues without fear of retribution.</li><li>Treat deviations and near-misses as opportunities for learning, not blame.</li><li>Implement formal mechanisms for capturing lessons learned and sharing best practices across functions.</li></ul>
+                    <div class="anchor-box"><strong>Anchor:</strong> EMA notes psychological safety as key to sustaining quality, while FDA highlights "quality maturity" as the ability to learn and adapt.</div>
                     <h4>4. Invest in Competency and Continuous Development</h4>
-                    <ul>
-                        <li>Develop training beyond SOP compliance: critical thinking, risk management, and data integrity.</li>
-                        <li>Equip staff to understand why quality matters—not just what to do.</li>
-                        <li>Recognize and reward behaviors that demonstrate ownership of quality.</li>
-                    </ul>
-                    <div class="anchor-box">
-                        <strong>Anchor:</strong> Both FDA and EMA underline that building capability and mindset are more impactful than check-the-box training.
-                    </div>
-                    
+                    <ul><li>Develop training beyond SOP compliance: critical thinking, risk management, and data integrity.</li><li>Equip staff to understand why quality matters — not just what to do.</li><li>Recognize and reward behaviors that demonstrate ownership of quality.</li></ul>
+                    <div class="anchor-box"><strong>Anchor:</strong> Both FDA and EMA underline that building capability and mindset are more impactful than check-the-box training.</div>
                     <h4>5. Integrate Digital and Data Governance</h4>
-                    <ul>
-                        <li>Validate computerized systems, ensure audit trails, and control data access.</li>
-                        <li>Develop governance frameworks for emerging tools such as AI/ML used in trial conduct or manufacturing.</li>
-                        <li>Monitor data integrity as a continuous, real-time process—not a retrospective exercise.</li>
-                    </ul>
-                    <div class="anchor-box">
-                        <strong>Anchor:</strong> FDA warning letters repeatedly cite data integrity failures; EMA echoes that trust depends on robust digital governance.
-                    </div>
-                    
+                    <ul><li>Validate computerized systems, ensure audit trails, and control data access.</li><li>Develop governance frameworks for emerging tools such as AI/ML used in trial conduct or manufacturing.</li><li>Monitor data integrity as a continuous, real-time process — not a retrospective exercise.</li></ul>
+                    <div class="anchor-box"><strong>Anchor:</strong> FDA warning letters repeatedly cite data integrity failures; EMA echoes that trust depends on robust digital governance.</div>
                     <h4>6. Maintain Continuous Inspection Readiness</h4>
-                    <ul>
-                        <li>Adopt "always-ready" documentation practices across sites and systems.</li>
-                        <li>Conduct regular mock inspections to test resilience and responsiveness.</li>
-                        <li>Embed inspection readiness into daily operations—not as a scramble before regulator visits.</li>
-                    </ul>
-                    <div class="anchor-box">
-                        <strong>Anchor:</strong> EMA's reflections stress sustainable readiness, while FDA's CfQ expects maturity models that demonstrate resilience under inspection pressure.
-                    </div>
-                    
+                    <ul><li>Adopt "always-ready" documentation practices across sites and systems.</li><li>Conduct regular mock inspections to test resilience and responsiveness.</li><li>Embed inspection readiness into daily operations — not as a scramble before regulator visits.</li></ul>
+                    <div class="anchor-box"><strong>Anchor:</strong> EMA's reflections stress sustainable readiness, while FDA's CfQ expects maturity models that demonstrate resilience under inspection pressure.</div>
                     <h4>Final Thoughts: From Compliance to Culture</h4>
                     <p>The FDA's Case for Quality and EMA's Quality Culture reflections send a unified message: regulators are no longer satisfied with companies that "pass inspections." They expect organizations to demonstrate a living culture of quality that safeguards patients, enables innovation, and drives operational excellence.</p>
-                    
-                    <p>The companies that succeed will be those that see quality as a strategic enabler, not a regulatory burden—building systems, leadership, and cultures that earn the trust of regulators, patients, and partners alike.</p>
                 </div>
             </div>
-            
-            <!-- Article 3 -->
+
             <div id="article3" class="blog-article-content">
-                <div class="blog-article-title">Integrated Trial Process</div>
+                <button class="blog-back-btn" onclick="hideArticle('article3')">← Back to all articles</button>
+                <div class="blog-article-title">Integration is the New Compliance: Streamlining Trials with ICH GCP E6 (R3)</div>
+                <span class="blog-article-date">Published: September 2025</span>
                 <div class="blog-text">
-                    <p>The biopharmaceutical industry stands at a crossroads. We are pioneering revolutionary therapies—from gene editing to personalized cancer treatments—yet the clinical development process itself often remains siloed, slow, and staggeringly expensive. The traditional, sequential approach to clinical trials is no longer sustainable.</p>
-                    
-                    <p>The solution? A strategic shift towards an Integrated Trial Process.</p>
-                    
-                    <p>This is not just a buzzword; it is a fundamental re-imagining of how we conduct clinical research. It is about breaking down internal and external barriers to create a seamless, data-driven ecosystem from study concept to regulatory submission. But with greater integration and technological adoption comes greater responsibility, especially concerning the bedrock of our industry: compliance with GxP principles and evolving Regulatory Authority expectations.</p>
-                    
+                    <p>The biopharmaceutical industry stands at a crossroads. We are pioneering revolutionary therapies — from gene editing to personalized cancer treatments — yet the clinical development process itself often remains siloed, slow, and staggeringly expensive. The traditional, sequential approach to clinical trials is no longer sustainable.</p>
+                    <p>The solution? A strategic shift towards an Integrated Trial Process — a fundamental re-imagining of how we conduct clinical research.</p>
                     <h4>What is an Integrated Trial Process?</h4>
-                    <p>An Integrated Trial Process is a holistic framework where all functional areas—Clinical Operations, Data Management, Biostatistics, Regulatory Affairs, Pharmacovigilance, and Quality Assurance—work in concert from the very beginning of a trial's lifecycle.</p>
-                    
+                    <p>An Integrated Trial Process is a holistic framework where all functional areas — Clinical Operations, Data Management, Biostatistics, Regulatory Affairs, Pharmacovigilance, and Quality Assurance — work in concert from the very beginning of a trial's lifecycle.</p>
                     <p><strong>Key pillars include:</strong></p>
-                    <ul>
-                        <li><strong>Unified Technology Platforms:</strong> Moving away from disparate systems to integrated eClinical platforms (EDC, eCOA, CTMS, RTSM) that interoperate, creating a single source of truth.</li>
-                        <li><strong>Risk-Based Quality Management (RBQM):</strong> Proactively identifying and mitigating critical risks to patient safety and data integrity, which is now central to modern regulatory thinking.</li>
-                        <li><strong>Centralized Monitoring:</strong> Leveraging analytics and centralized data review to oversee study conduct in real-time.</li>
-                        <li><strong>End-to-End Data Flow:</strong> Designing processes so that data flows seamlessly from the patient to the regulatory submission package, minimizing manual handling.</li>
-                    </ul>
-                    
+                    <ul><li><strong>Unified Technology Platforms:</strong> Moving away from disparate systems to integrated eClinical platforms (EDC, eCOA, CTMS, RTSM) that interoperate, creating a single source of truth.</li><li><strong>Risk-Based Quality Management (RBQM):</strong> Proactively identifying and mitigating critical risks to patient safety and data integrity.</li><li><strong>Centralized Monitoring:</strong> Leveraging analytics and centralized data review to oversee study conduct in real-time.</li><li><strong>End-to-End Data Flow:</strong> Designing processes so that data flows seamlessly from the patient to the regulatory submission package.</li></ul>
                     <h4>The Compliance Imperative: GxP in an Integrated World</h4>
-                    <p>Integration empowers a more robust and demonstrable adherence to GxP. The fundamental principles of Good Clinical Practice (GCP), Good Laboratory Practice (GLP), and Good Manufacturing Practice (GMP) remain non-negotiable.</p>
-                    
-                    <p><strong>Here is how integration strengthens compliance:</strong></p>
-                    
-                    <h5>1. Enhanced Data Integrity (ALCOA+ Principles):</h5>
-                    <p>An integrated system creates a natural, secure audit trail. When data flows directly from a source system (like an eCOA device) into the EDC, it inherently supports Attributable, Legible, Contemporaneous, Original, and Accurate (ALCOA+) data, a core requirement.</p>
-                    
-                    <h5>2. Proactive Quality Oversight (ICH E6 (R3)):</h5>
-                    <p>The latest ICH E6 (R3) draft principles emphasize a streamlined, risk-based approach focused on critical-to-quality factors. An integrated process, with its continuous data review, is the operational engine for this. It moves us beyond document-centric checklists to a data-driven, quality-focused system that aligns perfectly with the new direction of GCP.</p>
-                    
-                    <h5>3. Effective Management of External Service Providers:</h5>
-                    <p>The term "Vendor Management" has evolved. As reflected in modern guidelines, "External Service Provider (ESP)" more accurately describes these critical partners, emphasizing shared responsibility. An integrated process requires and enables better oversight of ESPs through transparent, real-time access to performance and quality metrics, ensuring seamless compliance across the entire trial ecosystem.</p>
-                    
+                    <p>Integration empowers a more robust and demonstrable adherence to GxP. The fundamental principles of GCP, GLP, and GMP remain non-negotiable — and integration makes them stronger.</p>
                     <h4>Meeting the Bar for Modern Regulatory Authorities</h4>
-                    <p>Global Regulatory Authorities are not just encouraging this shift; they are building frameworks for it. The updated ICH E6 (R3) and ICH E8 (R1) guidelines provide the foundation for a more flexible, efficient, and quality-driven approach.</p>
-                    <ul>
-                        <li><strong>ICH E6 (R3):</strong> This revision is a paradigm shift. It encourages the use of technological innovations and focuses on the conduct of critical trial activities, regardless of who performs them (sponsor or ESP). An integrated trial process is the practical application of these principles.</li>
-                        <li><strong>ICH E8 (R1):</strong> This guideline on General Considerations for Clinical Studies reinforces the concept of quality by design, which is inherent to an integrated approach from the very first protocol draft.</li>
-                        <li><strong>FDA & EMA on Digital Health:</strong> Regulatory support for digital endpoints, decentralized clinical trials (DCTs), and real-world evidence (RWE) necessitates an integrated, interoperable, and validated technology stack. A compliant, integrated infrastructure is the prerequisite for this evolution.</li>
-                    </ul>
-                    
-                    <h4>The Path Forward: Challenges and Commitment</h4>
-                    <p>Transitioning to a fully integrated model requires:</p>
-                    <ul>
-                        <li><strong>Upfront Investment:</strong> In technology, training, and change management.</li>
-                        <li><strong>Cross-Functional Collaboration:</strong> A cultural shift where departments and External Service Providers operate as a unified team.</li>
-                        <li><strong>Mastering Interoperability:</strong> Ensuring all systems and partners can work together seamlessly while maintaining data integrity and security, in line with the updated GCP principles.</li>
-                    </ul>
-                    
-                    <p>The commitment, however, is worth it. The payoff is immense: more agile trials, robust data, and the accelerated delivery of safe and effective therapies to patients.</p>
+                    <ul><li><strong>ICH E6 (R3):</strong> Encourages technological innovations and focuses on critical trial activities regardless of who performs them.</li><li><strong>ICH E8 (R1):</strong> Reinforces quality by design, inherent to an integrated approach from the very first protocol draft.</li><li><strong>FDA & EMA on Digital Health:</strong> Regulatory support for DCTs and RWE necessitates an integrated, interoperable, validated technology stack.</li></ul>
+                    <p>The payoff is immense: more agile trials, robust data, and the accelerated delivery of safe and effective therapies to patients.</p>
                 </div>
             </div>
-            
-            <!-- Article 4 -->
+
             <div id="article4" class="blog-article-content">
-                <div class="blog-article-title">End-To-End Quality Process</div>
+                <button class="blog-back-btn" onclick="hideArticle('article4')">← Back to all articles</button>
+                <div class="blog-article-title">Beyond Compliance: How End-to-End Quality Drives Patient Safety and Regulatory Success</div>
+                <span class="blog-article-date">Published: September 2025</span>
                 <div class="blog-text">
-                    <p>In today's pharmaceutical and biotech landscape, quality is no longer a checkpoint—it is a continuum. Regulatory agencies such as the FDA, EMA, MHRA, and WHO increasingly demand that organizations embed quality principles throughout the entire product lifecycle, from early R&D and clinical trials to manufacturing, distribution, and post-market surveillance. The message is clear: patient safety, data integrity, and regulatory compliance must be designed into processes, not inspected in at the end.</p>
-                    
+                    <p>In today's pharmaceutical and biotech landscape, quality is no longer a checkpoint — it is a continuum. Regulatory agencies such as the FDA, EMA, MHRA, and WHO increasingly demand that organizations embed quality principles throughout the entire product lifecycle.</p>
                     <h4>1. Quality by Design (QbD) – Building Quality from the Start</h4>
-                    <p>Guided by ICH Q8 (Pharmaceutical Development) and ICH Q11 (Drug Substance Development and Manufacture), regulators expect sponsors to apply QbD principles early. This means defining Critical Quality Attributes (CQAs) and Critical Process Parameters (CPPs) upfront to ensure robustness and reproducibility. QbD shifts the paradigm from reactive quality control to proactive quality assurance.</p>
-                    
+                    <p>Guided by ICH Q8 and ICH Q11, regulators expect sponsors to apply QbD principles early — defining Critical Quality Attributes (CQAs) and Critical Process Parameters (CPPs) upfront to ensure robustness and reproducibility.</p>
                     <h4>2. Integrated Quality Management Systems (QMS)</h4>
-                    <p>ICH Q10 Pharmaceutical Quality System is the global benchmark. A strong QMS, aligned with ICH Q10, is the foundation of regulatory compliance. Regulators look for:</p>
-                    <ul>
-                        <li>Documented risk-based policies and SOPs</li>
-                        <li>Governance structure defining accountability across R&D, GCP, GMP, and GDP</li>
-                        <li>Evidence that QMS processes are consistently applied across the supply chain</li>
-                    </ul>
-                    
+                    <p>ICH Q10 Pharmaceutical Quality System is the global benchmark. Regulators look for documented risk-based policies and SOPs, governance structure defining accountability across R&D, GCP, GMP, and GDP, and evidence that QMS processes are consistently applied across the supply chain.</p>
                     <h4>3. Data Integrity and Digital Governance</h4>
-                    <p>Data integrity remains a top enforcement priority. FDA warning letters and MHRA findings repeatedly cite failures in audit trails, access controls, and system validation. Regulators expect full compliance with ALCOA+ principles (Attributable, Legible, Contemporaneous, Original, Accurate, plus Complete, Consistent, Enduring, and Available).</p>
-                    
-                    <p>As AI, machine learning, and advanced analytics become integral to clinical development and manufacturing, governance of digital tools and algorithms is emerging as a regulatory hot spot. Authorities expect validation, transparency, and oversight frameworks to ensure data-driven decisions remain reliable and compliant.</p>
-                    
+                    <p>Data integrity remains a top enforcement priority. Regulators expect full compliance with ALCOA+ principles. As AI, machine learning, and advanced analytics become integral to clinical development, governance of digital tools is emerging as a regulatory hot spot.</p>
                     <h4>4. Continuous Monitoring and Risk Management</h4>
-                    <p>End-to-end quality requires risk-based oversight. The updated ICH Q9(R1) reinforces the need for systematic identification, prioritization, and mitigation of risks that could impact patient safety and data integrity. Regulators are moving toward risk-based inspections and expect companies to demonstrate proactive monitoring using Key Performance Indicators (KPI), Key Risk Indicators (KRI), and trend analytics.</p>
-                    
+                    <p>The updated ICH Q9(R1) reinforces the need for systematic identification, prioritization, and mitigation of risks. Regulators expect companies to demonstrate proactive monitoring using KPIs, KRIs, and trend analytics.</p>
                     <h4>5. External Service Provider(s) and Partner Oversight</h4>
-                    <p>With the global reliance on various external service providers (CRO, CMO, technology providers, etc.), third-party oversight is a regulatory expectation, not an option. Sponsors must perform documented due diligence, routine audits, and performance monitoring to ensure external partners operate to the same GxP and QMS standards. Failures at vendor level are increasingly treated as sponsor accountability gaps.</p>
-                    
-                    <h4>6. Sustaining and Inspection Ready Quality Culture</h4>
-                    <p>Perhaps the most critical element is a culture of quality. Regulators now look beyond procedures and systems — they assess organizational culture. The FDA's Case for Quality and the EMA's reflections on Quality Culture highlight the importance of embedding accountability, empowerment, and continuous readiness. Inspection readiness is not an event; it is a mindset and daily practice that sustains compliance and builds patient trust.</p>
-                    
+                    <p>Third-party oversight is a regulatory expectation, not an option. Sponsors must perform documented due diligence, routine audits, and performance monitoring. Failures at vendor level are increasingly treated as sponsor accountability gaps.</p>
+                    <h4>6. Sustaining an Inspection-Ready Quality Culture</h4>
+                    <p>Regulators now look beyond procedures and systems — they assess organizational culture. Inspection readiness is not an event; it is a mindset and daily practice that sustains compliance and builds patient trust.</p>
                     <h4>Final Thoughts</h4>
-                    <p>End-to-end quality integration is now a regulatory imperative. Organizations that build strong governance frameworks, embrace digital and data integrity, and foster a culture of continuous improvement will not only meet FDA, EMA, MHRA, and WHO expectations but also gain a competitive edge in operational excellence and sustainable growth.</p>
-                    
-                    <p>Quality is not just compliance — it is the foundation of patient safety, trust, and innovation.</p>
+                    <p>Quality is not just compliance — it is the foundation of patient safety, trust, and innovation. Organizations that embrace end-to-end quality integration will gain a competitive edge in operational excellence and sustainable growth.</p>
                 </div>
             </div>
+
+            <div id="article5" class="blog-article-content">
+                <button class="blog-back-btn" onclick="hideArticle('article5')">← Back to all articles</button>
+                <div class="blog-article-title">The Sponsor's Unwavering Duty: Mastering Quality Assurance in the Age of External Service Providers</div>
+                <span class="blog-article-date">Published: February 2026</span>
+                <div class="blog-text">
+                    <p>The modern clinical trial is a symphony of specialized expertise, orchestrated by a growing ecosystem of External Service Providers (ESPs). From biostatistics to bioanalytics, their contributions are invaluable. Yet, amidst this complexity, one principle remains absolute and non-negotiable: the sponsor retains ultimate responsibility for trial quality, data integrity, and patient safety. Outsourcing a function is not outsourcing accountability.</p>
+                    <p>This is where a strategic, proactive Quality Assurance (QA) framework transitions from a compliance task to a critical leadership imperative. Aligned with the ICH GCP E6 (R3) principles, effective ESP management is the fundament of a successful, inspection-ready trial.</p>
+                    <h4>The Core Tenets of a Proactive QA Framework for ESPs</h4>
+                    <p><strong>Risk-Based Due Diligence is the Foundation.</strong> Before selection, assess the intrinsic risk of the service. What is its potential impact on patient safety and data reliability? This risk profile dictates the rigor of your qualification. Scrutinize the provider's qualifications, regulatory inspection history, and the robustness of their own quality management systems. This is not a checkbox exercise; it is a strategic investment in risk prevention.</p>
+                    <p><strong>The Quality Agreement: Your Strategic Alliance Contract.</strong> Move beyond the simple service contract. The Quality Agreement, a focal point in ICH GCP E6 (R3), is the definitive blueprint for partnership. It must unambiguously define roles, responsibilities, communication pathways (including safety data flow), and escalation procedures. Clarity here prevents chaos later.</p>
+                    <p><strong>Oversight is a Continuous Activity, Not an Event.</strong> Responsibility demands active stewardship. Implement a fit-for-purpose oversight plan: monitor key performance indicators (KPIs), hold regular governance meetings focused on quality and risk, and maintain a risk-based audit schedule. This ongoing dialogue is essential for early issue detection and course correction.</p>
+                    <p><strong>Govern Change Relentlessly.</strong> In a dynamic trial environment, change is inevitable. Any modification to the ESP's processes, key personnel, or subcontractors must trigger a formalized change control process. Evaluate the impact, document the decision, and communicate effectively. Unmanaged change is a primary source of systemic failure.</p>
+                    <p><strong>Cultivate Unwavering Inspection Readiness.</strong> Transparency and proactive communication are the hallmarks of a mature partnership. Both sponsor and ESP must operate in a perpetual state of readiness. This means accurate, contemporaneous documentation and a unified understanding of responsibilities, ensuring a cohesive and confident response during regulatory inspections.</p>
+                    <h4>The Evolution from R2 to R3: A Sharper Focus on Governance</h4>
+                    <p>ICH GCP E6 (R3) brings a necessary evolution from the R2 guideline. While R2 established the sponsor's ultimate responsibility and the need for written agreements, R3 significantly strengthens the framework around ESP governance. It emphasizes a more systematic, risk-based approach to selection and qualification, mandates more detailed and explicit Quality Agreements, and formalizes the expectations for ongoing, documented oversight and performance management. The transition is from having agreements to actively managing through them — shifting from delegation to true alliance.</p>
+                    <h4>Navigating the High-Stakes Risk of Unqualified ESPs</h4>
+                    <p>Engaging an unqualified ESP is a profound regulatory and operational risk. It directly threatens data integrity and patient safety, potentially leading to regulatory inspection findings (Form 483s), clinical hold, study rejection, or application denial. The resulting costs — rework, audit findings, reputational damage, and lost time — far exceed any perceived short-term savings from selecting a subpar provider.</p>
+                    <p>However, there are rare, justifiable circumstances where a sponsor may engage a provider who is not previously qualified. In these exceptional cases, a rigorous risk-mitigation protocol is non-negotiable:</p>
+                    <ul>
+                        <li><strong>Formal Risk-Benefit Justification:</strong> Document a clear, compelling rationale approved by senior quality and clinical leadership.</li>
+                        <li><strong>Enhanced Due Diligence &amp; Concurrent Qualification:</strong> Conduct a thorough, expedited assessment of the ESP's systems and processes in parallel with engagement initiation.</li>
+                        <li><strong>Stringent Initial Controls &amp; Oversight:</strong> Implement a heightened oversight plan from day one, including tighter monitoring, more frequent reporting, and potentially on-site presence or remote system access.</li>
+                        <li><strong>Explicit Contingency Planning:</strong> Define clear, actionable triggers and pathways for rapid decommissioning or transition of the service if performance standards are not met.</li>
+                        <li><strong>Transparency with Regulators:</strong> Be prepared to transparently explain the rationale, risk assessment, and enhanced controls if questioned during an inspection.</li>
+                    </ul>
+                    <h4>Beyond Compliance: The Quality Partnership</h4>
+                    <p>Ultimately, exemplary ESP management transcends compliance. It is about forging strong, quality-focused partnerships that drive operational excellence and continuous improvement. It is about aligning incentives around a shared commitment to patient safety and data quality.</p>
+                    <p>Strategic QA in ESP management is defined by five pillars: Risk-Based Qualification, Robust Quality Agreements, Active Oversight, Rigorous Change Control, and a Culture of Shared Inspection Readiness.</p>
+                    <p>By mastering these, we do not just protect our trials; we elevate them — ensuring that the externalized model delivers on its promise of innovation, efficiency, and unwavering trust.</p>
+                </div>
+            </div>
+
         </div>
 
-        <!-- CONTACT ME Expanded -->
+        <!-- CONTACT -->
         <div id="contact" class="expanded-content">
             <button class="close-btn" onclick="toggleSection('contact')">×</button>
             <h2>Contact Me</h2>
-            
             <div class="contact-grid">
                 <div class="contact-card">
                     <h4>Email</h4>
-                    <div class="contact-value">
-                        <a href="mailto:georgi@georgigerov-qcons.ch">georgi@georgigerov-qcons.ch</a>
-                    </div>
+                    <div class="contact-value"><a href="mailto:georgi@georgigerov-qcons.ch">georgi@georgigerov-qcons.ch</a></div>
                 </div>
-                
                 <div class="contact-card">
                     <h4>Phone</h4>
-                    <div class="contact-value">
-                        <a href="tel:+41764899079">+41 76 489 90 79</a>
-                    </div>
+                    <div class="contact-value"><a href="tel:+41764899079">+41 76 489 90 79</a></div>
                 </div>
-                
                 <div class="contact-card">
                     <h4>LinkedIn</h4>
-                    <div class="contact-value">
-                        <a href="https://www.linkedin.com/in/georgigerov/" target="_blank">linkedin.com/in/georgigerov</a>
-                    </div>
+                    <div class="contact-value"><a href="https://www.linkedin.com/in/georgigerov/" target="_blank">linkedin.com/in/georgigerov</a></div>
                     <a href="https://www.linkedin.com/in/georgigerov/" target="_blank" class="linkedin-btn">Connect on LinkedIn</a>
                 </div>
             </div>
-            
             <div style="text-align: center; margin-top: 40px; padding: 25px; background: #f8fafc; border-radius: 18px; border-bottom: 3px solid #C69C6D;">
                 <p style="font-family: 'Inter', sans-serif; font-size: 1.3em; color: #0a3147;">Available for consulting engagements and quality leadership opportunities.</p>
                 <p style="font-family: 'Inter', sans-serif; color: #2c5282; margin-top: 15px; font-size: 1.2em;">Based in Switzerland | Global availability</p>
             </div>
         </div>
+
     </div>
 
-    <!-- FOOTER - CENTERED AT BOTTOM -->
     <div class="footer">
         © 2026 Georgi Gerov | Turning Quality from a compliance burden into your most powerful competitive advantage.
     </div>
 
-    <!-- JavaScript -->
     <script>
         function toggleSection(sectionId) {
             const section = document.getElementById(sectionId);
             const allSections = document.querySelectorAll('.expanded-content');
-            
-            // Close all other sections
-            allSections.forEach(s => {
-                if (s.id !== sectionId) {
-                    s.classList.remove('active');
-                }
-            });
-            
-            // Toggle the clicked section
+            allSections.forEach(s => { if (s.id !== sectionId) s.classList.remove('active'); });
             section.classList.toggle('active');
-            
-            // Scroll to section if opened
             if (section.classList.contains('active')) {
-                setTimeout(() => {
-                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 100);
+                setTimeout(() => { section.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
             }
         }
 
-        function showArticle(articleId, event) {
-            event.stopPropagation(); // Prevent triggering the card click
-            
-            // Hide all articles
+        function showArticle(articleId) {
+            const cards = document.getElementById('blog-cards');
             const articles = document.querySelectorAll('.blog-article-content');
-            articles.forEach(article => {
-                article.classList.remove('active');
-            });
-            
-            // Show selected article
-            const selectedArticle = document.getElementById(articleId);
-            selectedArticle.classList.add('active');
+            const divider = document.querySelector('.blog-divider');
+            articles.forEach(a => a.classList.remove('active'));
+            cards.style.display = 'none';
+            divider.style.display = 'none';
+            const selected = document.getElementById(articleId);
+            selected.classList.add('active');
+            setTimeout(() => { selected.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
         }
 
-        // Close when clicking outside
+        function hideArticle(articleId) {
+            const cards = document.getElementById('blog-cards');
+            const divider = document.querySelector('.blog-divider');
+            document.getElementById(articleId).classList.remove('active');
+            cards.style.display = 'grid';
+            divider.style.display = 'block';
+        }
+
         document.addEventListener('click', function(event) {
-            if (!event.target.closest('.section-card') && 
-                !event.target.closest('.expanded-content') && 
-                !event.target.closest('.close-btn') &&
-                !event.target.closest('.blog-title-item')) {
-                document.querySelectorAll('.expanded-content').forEach(s => {
-                    s.classList.remove('active');
-                });
+            if (!event.target.closest('.section-card') && !event.target.closest('.expanded-content') && !event.target.closest('.close-btn') && !event.target.closest('.blog-card')) {
+                document.querySelectorAll('.expanded-content').forEach(s => s.classList.remove('active'));
             }
         });
     </script>
