@@ -285,6 +285,122 @@
             .expanded-content h2 { font-size: 2.5em; }
             .section-card { flex: 0 0 calc(50% - 15px); min-width: 140px; height: 240px; }
         }
+
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonials-section {
+            margin-top: 50px;
+            padding: 45px;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%);
+            border-radius: 30px;
+            border-left: 8px solid #2c5282;
+            border-bottom: 4px solid #C69C6D;
+        }
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .testimonials-header h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 2.8em;
+            color: #0a3147;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .testimonials-header p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1em;
+            color: #4a5568;
+            font-style: italic;
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px 40px;
+            border-left: 6px solid #C69C6D;
+            border-bottom: 3px solid #2c5282;
+            box-shadow: 0 10px 25px rgba(44, 82, 130, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(44, 82, 130, 0.15);
+        }
+        .quote-mark {
+            font-family: Georgia, serif;
+            font-size: 5em;
+            color: #C69C6D;
+            opacity: 0.35;
+            line-height: 0.8;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .testimonial-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05em;
+            line-height: 1.9;
+            color: #2d3748;
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+        .testimonial-footer {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding-top: 20px;
+            border-top: 2px solid #e2e8f0;
+        }
+        .testimonial-avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2c5282, #C69C6D);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2em;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+        }
+        .testimonial-author { flex: 1; }
+        .testimonial-name {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #0a3147;
+            margin-bottom: 3px;
+        }
+        .testimonial-role {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9em;
+            color: #2c5282;
+            font-weight: 600;
+        }
+        .testimonial-stars {
+            color: #C69C6D;
+            font-size: 1.3em;
+            letter-spacing: 2px;
+        }
+        .cta-testimonial {
+            text-align: center;
+            margin-top: 35px;
+            padding: 25px;
+            background: rgba(44, 82, 130, 0.05);
+            border-radius: 16px;
+            border: 1px dashed #2c5282;
+        }
+        .cta-testimonial p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05em;
+            color: #4a5568;
+            margin-bottom: 8px;
+        }
+        @media (max-width: 600px) {
+            .testimonials-section { padding: 25px; }
+            .testimonial-card { padding: 25px; }
+            .testimonials-header h2 { font-size: 2em; }
+        }
     </style>
 </head>
 <body>
@@ -677,6 +793,40 @@
                 </div>
             </div>
 
+        </div>
+
+        <!-- TESTIMONIALS -->
+        <div class="testimonials-section">
+            <div class="testimonials-header">
+                <h2>⭐ What Colleagues Say</h2>
+                <p>Real words from professionals who have worked alongside me</p>
+            </div>
+
+            <div class="testimonial-card">
+                <span class="quote-mark">"</span>
+                <div class="testimonial-text">
+                    I had the pleasure of working closely with Georgi and have been consistently impressed with his professionalism, dedication, and deep understanding of GxP compliance and specifics, quality systems, and regulatory requirements in the pharmaceutical industry.
+                    <br><br>
+                    During his tenure Georgi was responsible for managing and overseeing our GxP quality system, ensuring compliance with all regulatory standards, and maintaining the integrity of our quality assurance processes. He demonstrated a comprehensive knowledge of GxP guidelines, including 21 CFR Part 820, 21 CFR Part 11, and ISO 9001 standards. His ability to assess and implement a new and targeted approach to the Company's QMS was vital in helping us maintain compliance during both internal and external audits.
+                    <br><br>
+                    Georgi was instrumental in coordinating training programs for staff, ensuring that all team members were up-to-date on the latest quality standards and practices. He was also responsible for ensuring audits and assessments were conducted in a due manner to identify areas for continuous improvement, consistently driving initiatives that enhanced the effectiveness and efficiency of our quality management processes.
+                    <br><br>
+                    His proactive approach to risk management and problem-solving significantly contributed to improving product quality, safety, and regulatory adherence.
+                </div>
+                <div class="testimonial-footer">
+                    <div class="testimonial-avatar">AM</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-name">Ana M.</div>
+                        <div class="testimonial-role">Senior QA Auditor | Pharmaceutical Industry</div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="cta-testimonial">
+                <p><strong>Have you worked with Georgi?</strong> Your endorsement matters.</p>
+                <p style="font-size: 0.95em; color: #718096; margin-top: 5px;">Connect on <a href="https://www.linkedin.com/in/georgigerov/" target="_blank" style="color: #2c5282; font-weight: 600; text-decoration: underline;">LinkedIn</a> to leave a recommendation</p>
+            </div>
         </div>
 
         <!-- CONTACT -->
